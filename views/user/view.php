@@ -19,7 +19,6 @@
                     </tr>
             </table>        
         </div>
-        <?=$body?>
         <button type="button" class="button" onclick="location.href='<?=option('base_uri')?>user/<?=$user[id]?>/edit';">
             <span>Edit User</span>
         </button>
