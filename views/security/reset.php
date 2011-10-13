@@ -12,7 +12,7 @@
         </table>
         <br />
         <form action="<?=option('base_uri')?>login/reset" method="post">
-            Enter the email address for your account below and we will send you a new password.<br />
+            <span class="help">Enter the email address for your account below and we will send you a new password.</span><br />
             <br />
             <label for="Username">
                 Email Address<br />

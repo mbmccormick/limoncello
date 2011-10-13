@@ -602,6 +602,11 @@ p.checkbox {
     text-decoration: none;
 }
 
+.login-form .help {
+    background-color: transparent;
+    line-height: 1.4em;
+}
+
 .help {
     background-color: #ffffff;
     line-height: 1.4em;
