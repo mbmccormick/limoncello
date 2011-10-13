@@ -19,7 +19,7 @@
                 <td valign="middle" align="left">
                     <?php
                         
-                        if ($_SERVER[REQUEST_URI] == option('base_uri') {
+                        if ($_SERVER[REQUEST_URI] == option('base_uri')) {
                             echo "<a href='" . option('base_uri') . "' class='selected'>Dashboard</a>\n";
                         } else {
                             echo "<a href='" . option('base_uri') . "'>Dashboard</a>\n";
