@@ -9,37 +9,8 @@
         
         if ($user != null)
         {
-            $result = mysql_query("SELECT * FROM activity WHERE createdby='$user[id]' ORDER BY createddate DESC LIMIT 5");
-            while($row = mysql_fetch_array($result))
-            {
-                $body .= "<div class='list-item user-activity'>\n";
-                $body .= "<table cellpadding='0' cellspacing='0' style='width: 100%;'>\n";
-                
-                $body .= "<tr>\n";
-                $body .= "<td style='padding-bottom: 7px;'>\n";
-                $body .= "<b>" . ucfirst($row[headline]) . " " . FriendlyDate(1, strtotime($row[createddate])) . "</b>\n";
-                $body .= "</td>\n";
-                $body .= "</tr>\n";
-                $body .= "<tr>\n";
-                $body .= "<td valign='top'>\n";
-                $body .= "<span class='wikiStyle description truncate'>" . $row[description] . "</span>\n";
-                $body .= "</td>\n";
-                $body .= "</tr>\n";                    
-                
-                $body .= "</table>\n";
-                $body .= "</div>\n";
-            }
-            
-            if (mysql_num_rows($result) == 0)
-            {
-                $body .= "<div class='list-item user-activity'>\n";
-                $body .= "<p>There is currently no activity to display.</p>\n";
-                $body .= "</div>\n";
-            }
-            
             set("title", $user[username]);
             set("user", $user);
-            set("body", $body);
             return html("user/view.php");
         }
         else
