@@ -33,8 +33,8 @@
         return html("error/error.php", "layout.php", $args);
     }
     
-	/* Declare Common routes */
-	dispatch('/', 'common_dashboard');
+    /* Declare Common routes */
+    dispatch('/', 'common_dashboard');
 	
     /* Declare Security routes */
     dispatch('/login', 'login');
