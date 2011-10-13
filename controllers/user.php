@@ -64,7 +64,7 @@
     {
         Security_Authorize();
         
-		if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+        if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
         {
             header("Location: /user/" . params('id') . "&error=You are not authorized to add a new user!");
             exit;
@@ -78,7 +78,7 @@
     {
         Security_Authorize();
         
-		if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+        if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
         {
             header("Location: /user/" . params('id') . "&error=You are not authorized to add a new user!");
             exit;
@@ -108,7 +108,7 @@
     {
         Security_Authorize();
         
-		if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
+        if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
             $_SESSION["CurrentUser_ID"] != params('id'))
         {
             header("Location: /user/" . params('id') . "&error=You are not authorized to edit this user!");
@@ -136,7 +136,7 @@
     {
         Security_Authorize();
         
-		if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
+        if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
             $_SESSION["CurrentUser_ID"] != params('id'))
         {
             header("Location: /user/" . params('id') . "&error=You are not authorized to edit this user!");
@@ -172,7 +172,8 @@
     {
         Security_Authorize();
         
-        if ($_SESSION["CurrentUser_ID"] != params('id'))
+        if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
+            $_SESSION["CurrentUser_ID"] != params('id'))
         {
             header("Location: " . option('base_uri') . "user/" . params('id') . "&error=You are not authorized to delete this user!");
             exit;
