@@ -1,6 +1,6 @@
 <?php
 
-	require_once "library/limonade.php";
+    require_once "library/limonade.php";
     require_once "library/lightopenid/openid.php";
     
     require("config/config.php");
