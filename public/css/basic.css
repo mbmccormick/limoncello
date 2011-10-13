@@ -1,0 +1,418 @@
+html {
+}
+
+body {
+    font-family: helvetica, arial;
+    font-size: 14px;
+    color: #333333;
+    padding: 30px;
+    margin: 0px auto;
+    width: 780px;
+    background-color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.0078125) 0px 0px 1px;
+}
+
+.mac {
+    text-shadow: none;
+}
+
+a {
+    color: #3C95D2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.footer {
+    font-size: 13px;
+    padding: 30px;
+    text-align: center;
+}
+
+.content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.user-password {
+    background-color: #ffffff
+}
+
+.create {
+    border: solid 1px #cccccc;
+    background-color: whiteSmoke;
+    color: #555;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    width: 150px;
+}
+
+.button {
+    border-bottom: 1px solid #EBEBEB;
+    border-bottom-left-radius: 4px 4px;
+    border-bottom-right-radius: 4px 4px;
+    border: none;
+    border-top-left-radius: 4px 4px;
+    border-top-right-radius: 4px 4px;
+    color: #333;
+    cursor: pointer;
+    font-family: helvetica, arial, freesans, clean, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 34px;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    text-shadow: white 1px 1px 0px;
+    top: 1px;
+    white-space: nowrap;
+}
+
+.danger {
+    color: #990000
+}
+
+.button:hover {
+    border-bottom-color: #2A65A0;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.296875) -1px -1px 0px;
+}
+
+.danger:hover {
+    border-bottom-color: #CD504A;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.296875) -1px -1px 0px;
+}
+
+.webkit .button {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#E1E1E1), to(#ffffff));
+    -webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 4px;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.webkit .button:hover {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#3072B3), to(#599BDC))
+}
+
+.webkit .button.mousedown {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#599BDC), to(#3072B3))
+}
+
+.webkit .danger:hover {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#B33630), to(#DC5F59))
+}
+
+.webkit .danger.mousedown {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#DC5F59), to(#B33630))
+}
+
+.gecko .button {
+    background: -moz-linear-gradient(center bottom, #E1E1E1 0%, #ffffff 100%);
+    -moz-border-radius: 4px;
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.296875);
+}
+
+.gecko .button:hover {
+    background: -moz-linear-gradient(center bottom, #3072B3 0%, #599BDC 100%)
+}
+
+.gecko .button.mousedown {
+    background: -moz-linear-gradient(center bottom, #599BDC 0%, #3072B3 100%)
+}
+
+.gecko .danger:hover {
+    background: -moz-linear-gradient(center bottom, #B33630 0%, #DC5F59 100%)
+}
+
+.gecko .danger.mousedown {
+    background: -moz-linear-gradient(center bottom, #DC5F59 0%, #B33630 100%)
+}
+
+.ie .button {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#E1E1E1', GradientType=0)
+}
+
+.ie .button:hover {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#599BDC', EndColorStr='#3072B3', GradientType=0)
+}
+
+.ie .button.mousedown {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#3072B3', EndColorStr='#599BDC', GradientType=0)
+}
+
+.ie .danger:hover {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#DC5F59', EndColorStr='#B33630', GradientType=0)
+}
+
+.ie .danger.mousedown {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#B33630', EndColorStr='#DC5F59', GradientType=0)
+}
+
+.button span {
+    display: block;
+    height: 34px;
+    line-height: 36px;
+    padding: 0px 13px;
+}
+
+.gecko .button span {
+    margin-top: -3px
+}
+
+.minibutton {
+    border: 1px solid #D4D4D4;
+    border-bottom-left-radius: 3px 3px;
+    border-bottom-right-radius: 3px 3px;
+    border-top-left-radius: 3px 3px;
+    border-top-right-radius: 3px 3px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: helvetica, arial, freesans, clean, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 21px;
+    overflow: visible;
+    padding: 0px 0px 0px 3px;
+    text-shadow: white 1px 1px 0px;
+    white-space: nowrap;
+}
+
+.minidanger {
+    color: #900000
+}
+
+.minibutton:hover {
+    border-bottom-color: #2A65A0;
+    border-color: #518CC6 #518CC6 #2A65A0;
+    color: white;
+    text-decoration: none;
+    text-shadow: rgba(0, 0, 0, 0.296875) -1px -1px 0px;
+}
+
+.minidanger:hover {
+    border-bottom-color: #A0302A;
+    border-color: #C65651 #C65651 #A0302A;
+}
+
+.webkit .minibutton {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#E1E1E1), to(#ffffff));
+    padding: 1px 0px 0px 3px;
+}
+
+.webkit .minibutton:hover {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#3072B3), to(#599BDC))
+}
+
+.webkit .minibutton.mousedown {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#599BDC), to(#3072B3))
+}
+
+.webkit .minidanger:hover {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#B33630), to(#DC5F59))
+}
+
+.webkit .minidanger.mousedown {
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#DC5F59), to(#B33630))
+}
+
+.gecko .minibutton {
+    -moz-border-radius: 3px;
+    background: -moz-linear-gradient(center bottom, #E1E1E1 0%, #ffffff 100%);
+    padding: 0px 0px 1px 3px;
+}
+
+.gecko .minibutton:hover {
+    background: -moz-linear-gradient(center bottom, #3072B3 0%, #599BDC 100%)
+}
+
+.gecko .minibutton.mousedown {
+    background: -moz-linear-gradient(center bottom, #599BDC 0%, #3072B3 100%)
+}
+
+.gecko .minidanger:hover {
+    background: -moz-linear-gradient(center bottom, #B33630 0%, #DC5F59 100%)
+}
+
+.gecko .minidanger.mousedown {
+    background: -moz-linear-gradient(center bottom, #DC5F59 0%, #B33630 100%)
+}
+
+.ie .minibutton {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#E1E1E1', GradientType=0)
+}
+
+.ie .minibutton:hover {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#599BDC', EndColorStr='#3072B3', GradientType=0)
+}
+
+.ie .minibutton.mousedown {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#3072B3', EndColorStr='#599BDC', GradientType=0)
+}
+
+.ie .minidanger:hover {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#DC5F59', EndColorStr='#B33630', GradientType=0)
+}
+
+.ie .minidanger.mousedown {
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#B33630', EndColorStr='#DC5F59', GradientType=0)
+}
+
+.minibutton span {
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    padding: 0px 9px 0px 7px;
+}
+
+.options {
+    color: #999999;
+    padding-top: 10px;
+}
+
+.options .date {
+    margin-bottom: -2px
+}
+
+small {
+    color: #999;
+    font-size: 12px;
+}
+
+.standard-form {
+    border: solid 3px #E4E4E4;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 20px;
+    width: 345px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.standard-form h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 22px;
+}
+
+.standard-form h2 a {
+    color: #191919;
+}
+
+.standard-form h2 a:hover {
+    color: #3C95D2;
+    text-decoration: none;
+}
+
+.login-form {
+    background-color: #F1F1F1;
+    box-shadow: 1px 1px 3px #606060;
+    -moz-box-shadow: 1px 1px 3px #606060;
+    -webkit-box-shadow: 1px 1px 3px #606060;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+}
+
+.login-form h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 22px;
+}
+
+.login-form h2 a {
+    color: #191919;
+}
+
+.login-form h2 a:hover {
+    color: #3C95D2;
+    text-decoration: none;
+}
+
+.help {
+    background-color: #ffffff;
+    line-height: 1.4em;
+}
+
+form input.text,
+form input[type=text],
+form textarea,
+form input.password,
+form input[type=password] {
+    border: 1px solid #C4C4C4;
+    padding: 5px;
+    font-family: helvetica, arial;
+    text-shadow: rgba(0, 0, 0, 0.0078125) 0px 0px 1px;
+    margin-top: 5px;
+	font-size: 14px;
+}
+
+form label,
+form .label,
+label.standard {
+    color: #666;
+    display: block;
+    font-size: 110%;
+    margin: 1em 0px 0px;
+    margin-top: 1em;
+}
+
+.success {
+    background-color: #42A84F;
+    border-bottom: 3px solid #288033;
+    color: white;
+    font: normal normal 500 large/normal Arial, Helvetica, clean, sans-serif;
+    text-align: center;
+}
+
+.warning {
+    background-color: #E6C843;
+    border-bottom: 3px solid #C2A213;
+    color: white;
+    font: normal normal 500 large/normal Arial, Helvetica, clean, sans-serif;
+    text-align: center;
+}
+
+.error {
+    background-color: #E64343;
+    border-bottom: 3px solid #B53333;
+    color: white;
+    font: normal normal 500 large/normal Arial, Helvetica, clean, sans-serif;
+    text-align: center;
+}
+
+.form-actions {
+    text-align: right
+}
+
+.setting {
+    font-weight: bold
+}
+
+#google
+{
+    margin-bottom: -3px;
+    margin-right: 3px;
+}
+
+#arrow-top {
+    background: #CCCCCC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #191919;
+    display: block;
+    font-size: 36px;
+    opacity: 0.7;
+    padding: 12px 18px 12px 18px;
+    position: fixed;
+    right: 52px;
+    top: 62px;
+    cursor: pointer;
+}
