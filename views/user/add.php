@@ -1,12 +1,12 @@
 <div class="content">
     <div class="navigation">
-        <a href="<?=option('base_uri')?>user">Users</a> / <a href="<?=option('base_uri')?>user/add">New User</a>
+        <a href="<?=option('base_uri')?>users">Users</a> / <a href="<?=option('base_uri')?>users/add">New User</a>
     </div>
     <table cellpadding="0" cellspacing="0" style="width: 100%;">
         <tr valign="top">
             <td style="width: 50%;">
                 <div class="list">
-                    <form id="user-new" action="<?=option('base_uri')?>user/add" method="post">
+                    <form id="user-new" action="<?=option('base_uri')?>users/add" method="post">
                         <div class="list-item user">
                             <h3>New User</h3>
                             <br />
