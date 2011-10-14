@@ -79,7 +79,7 @@
         
         mysql_close($con);
         
-        header("Location: " . option('base_uri') . "user");
+        header("Location: " . option('base_uri') . "users&success=Your user was added successfully!");
         exit;
     }
     
