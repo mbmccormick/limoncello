@@ -56,13 +56,13 @@
                     <br />
                     You can change your password for your account by entering your current password and your new password in the form on the left.
                 </div>
-                <div class="standard-form help">
+                <?php if ($user[identity] != null) { ?>
+            	<div class="standard-form help">
                     <b>Login with your Google Account</b><br />
                     <br />
-                    <?php if ($user[identity] != null) { ?>
                     Your user is linked to your Google Account, which allows you to login to <?=ApplicationName?> with one click. If you don't like this, you can <a onclick="confirm('Are you sure you want to disconnect your Google Account?') ? location.href='<?=option('base_uri')?>login/openid/remove' : false;" href="#">disconnect</a> your Google Account.
-                    <?php } ?>
-                </div>
+            	</div>
+            	<?php } ?>
             </td>
         </tr>
     </table>
