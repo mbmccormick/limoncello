@@ -10,6 +10,10 @@
                         <div class="list-item user">
                             <h3>New User</h3>
                             <br />
+                            <b>Name</b><br />
+                            <input type="text" name="name" style="width: 333px;" /><br />
+                            <br />
+                            <br />
                             <b>Username</b><br />
                             <input type="text" name="username" style="width: 333px;" /><br />
                             <br />
