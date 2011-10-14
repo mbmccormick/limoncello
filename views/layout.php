@@ -25,16 +25,16 @@
                             echo "<a href='" . option('base_uri') . "'>Dashboard</a>\n";
                         }
                         
-                        if (strpos($_SERVER[REQUEST_URI], option('base_uri') . "user") === 0) {
-                            echo "<a href='" . option('base_uri') . "user' class='selected'>Users</a>\n";
+                        if (strpos($_SERVER[REQUEST_URI], option('base_uri') . "users") === 0) {
+                            echo "<a href='" . option('base_uri') . "users' class='selected'>Users</a>\n";
                         } else {
-                            echo "<a href='" . option('base_uri') . "user'>Users</a>\n";
+                            echo "<a href='" . option('base_uri') . "users'>Users</a>\n";
                         }
                         
                     ?>
                 </td>
                 <td valign="middle" align="right">
-                    <a href="<?=option('base_uri')?>user/<?php echo $_SESSION[CurrentUser_ID]; ?>"><?php echo $_SESSION[CurrentUser_Name]; ?></a>
+                    <a href="<?=option('base_uri')?>users/<?php echo $_SESSION[CurrentUser_ID]; ?>"><?php echo $_SESSION[CurrentUser_Name]; ?></a>
                     <a href="<?=option('base_uri')?>logout">Logout</a>
                 </td>
             </tr>
