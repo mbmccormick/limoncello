@@ -10,6 +10,10 @@
                         <div class="list-item user">
                             <h3>Edit User</h3>
                             <br />
+                            <b>Name</b><br />
+                            <input type="text" name="name" style="width: 333px;" value="<?=$user[name]?>" /><br />
+                            <br />
+                            <br />
                             <b>Username</b><br />
                             <input type="text" name="username" style="width: 333px;" value="<?=$user[username]?>" /><br />
                             <br />
