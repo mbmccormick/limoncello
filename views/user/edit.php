@@ -60,7 +60,7 @@
                     <b>Login with your Google Account</b><br />
                     <br />
                     <?php if ($user[identity] != null) { ?>
-                    Your account is linked with your Google Account, which allows you to login to <?=ApplicationName?> with one click. If you don't like this, you can always <a href="onclick=confirm('Are you sure you want to disconnect your Google Account?') ? location.href='<?=option('base_uri')?>login/openid/remove' : false;" href="#">disconnect</a> your Google Account.
+                    Your account is linked with your Google Account, which allows you to login to <?=ApplicationName?> with one click. If you don't like this, you can always <a onclick="confirm('Are you sure you want to disconnect your Google Account?') ? location.href='<?=option('base_uri')?>login/openid/remove' : false;" href="#">disconnect</a> your Google Account.
                     <?php } else { ?>
                     Did you know that you can login to <?=ApplicationName?> using your Google Account? If you want to set this up, click <a onclick="authenticateOpenID()" href="#">here</a> to get started.
                     <?php } ?>
