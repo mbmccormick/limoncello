@@ -47,13 +47,12 @@
     dispatch('/logout', 'logout');
     
     /* Declare User routes */
-    dispatch('/user', 'user_list');
-    dispatch('/user/add', 'user_add');
-    dispatch_post('/user/add', 'user_add_post');
-    dispatch('/user/:id/edit', 'user_edit');
-    dispatch_post('/user/:id/edit', 'user_edit_post');
-    dispatch('/user/:id/delete', 'user_delete');
-    dispatch('/user/:id', 'user_view');
+    dispatch('/users', 'user_list');
+    dispatch('/users/add', 'user_add');
+    dispatch_post('/users/add', 'user_add_post');
+    dispatch('/users/:id', 'user_edit');
+    dispatch_post('/users/:id/edit', 'user_edit_post');
+    dispatch('/users/:id/delete', 'user_delete');
     
     run();
     
