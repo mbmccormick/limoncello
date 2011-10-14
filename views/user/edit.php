@@ -1,12 +1,12 @@
 <div class="content">
     <div class="navigation">
-        <a href="<?=option('base_uri')?>user">Users</a> / <a href="<?=option('base_uri')?>user/<?=$user[id]?>/edit">Edit User</a>
+        <a href="<?=option('base_uri')?>users">Users</a> / <a href="<?=option('base_uri')?>users/<?=$user[id]?>">Edit User</a>
     </div>
     <table cellpadding="0" cellspacing="0" style="width: 100%;">
         <tr valign="top">
             <td style="width: 50%;">
                 <div class="list">
-                    <form id="user-edit" action="<?=option('base_uri')?>user/<?=$user[id]?>/edit" method="post">
+                    <form id="user-edit" action="<?=option('base_uri')?>users/<?=$user[id]?>/edit" method="post">
                         <div class="list-item user">
                             <h3>Edit User</h3>
                             <br />
@@ -38,7 +38,7 @@
                         <button type="submit" class="button">
                             <span>Save User</span>
                         </button>
-                        <button type="button" class="button danger" onclick="confirm('Are you sure you want to delete this user?') ? location.href='<?=option('base_uri')?>user/<?=$user[id]?>/delete' : false;">
+                        <button type="button" class="button danger" onclick="confirm('Are you sure you want to delete this user?') ? location.href='<?=option('base_uri')?>users/<?=$user[id]?>/delete' : false;">
                             <span>Delete</span>
                         </button>
                     </form>
