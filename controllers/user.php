@@ -107,7 +107,7 @@
         {
             set("title", "User Not Found");
             set("type", "user");
-            return html("common/notfound.php");
+            return html("error/notfound.php");
         }
     }
     
