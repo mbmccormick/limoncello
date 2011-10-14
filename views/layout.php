@@ -34,7 +34,7 @@
                     ?>
                 </td>
                 <td valign="middle" align="right">
-                    <a href="<?=option('base_uri')?>user/<?php echo $_SESSION[CurrentUser_ID]; ?>"><?php echo $_SESSION[CurrentUser_Username]; ?></a>
+                    <a href="<?=option('base_uri')?>user/<?php echo $_SESSION[CurrentUser_ID]; ?>"><?php echo $_SESSION[CurrentUser_Name]; ?></a>
                     <a href="<?=option('base_uri')?>logout">Logout</a>
                 </td>
             </tr>
