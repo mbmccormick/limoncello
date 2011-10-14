@@ -149,6 +149,8 @@
         
         mysql_close($con);
         
+        Security_Refresh(params('id'));
+        
         header("Location: " . option('base_uri') . "users/$user[id]&success=Your user was updated successfully!");
         exit;
     }
