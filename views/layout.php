@@ -26,7 +26,8 @@
                         }
                         
                         if ($_SESSION[CurrentUser_IsAdministrator] == "1") {
-                            if (strpos($_SERVER[REQUEST_URI], option('base_uri') . "users") === 0) {
+                            if (strpos($_SERVER[REQUEST_URI], option('base_uri') . "users") === 0 &&
+                                $_SERVER[REQUEST_URI] != option('base_uri') . "users/" . $_SESSION[CurrentUser_ID]) {
                                 echo "<a href='" . option('base_uri') . "users' class='selected'>Users</a>\n";
                             } else {
                                 echo "<a href='" . option('base_uri') . "users'>Users</a>\n";
@@ -36,7 +37,15 @@
                     ?>
                 </td>
                 <td valign="middle" align="right">
-                    <a href="<?=option('base_uri')?>users/<?php echo $_SESSION[CurrentUser_ID]; ?>"><?php echo $_SESSION[CurrentUser_Name]; ?></a>
+                    <?php
+                    
+                        if ($_SERVER[REQUEST_URI] == option('base_uri') . "users/" . $_SESSION[CurrentUser_ID]) {
+                            echo "<a href='" . option('base_uri') . "users/$_SESSION[CurrentUser_ID]' class='selected'>$_SESSION[CurrentUser_Name]</a>\n";
+                        } else {
+                            echo "<a href='" . option('base_uri') . "users/$_SESSION[CurrentUser_ID]'>$_SESSION[CurrentUser_Name]</a>\n";
+                        }
+                        
+                    ?>
                     <a href="<?=option('base_uri')?>logout">Logout</a>
                 </td>
             </tr>
