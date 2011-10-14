@@ -161,7 +161,7 @@
         $sql = "DELETE FROM user WHERE id='" . params('id') . "'";    
         mysql_query($sql);
 
-        header("Location: " . option('base_uri') . "user");
+        header("Location: " . option('base_uri') . "users&success=Your user was deleted successfully!");
         exit;
     }
 
