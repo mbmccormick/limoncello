@@ -9,6 +9,7 @@
             $row = mysql_fetch_array($sql);
             
             $_SESSION["CurrentUser_ID"] = $row[id];
+            $_SESSION["CurrentUser_Name"] = $row[name];
             $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_Email"] = $row[email];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
@@ -30,6 +31,7 @@
             $row = mysql_fetch_array($sql);
             
             $_SESSION["CurrentUser_ID"] = $row[id];
+            $_SESSION["CurrentUser_Name"] = $row[name];
             $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_Email"] = $row[email];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
