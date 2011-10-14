@@ -3,7 +3,13 @@
     function user_list()
     {
         Security_Authorize();
-    
+    	
+    	if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+        {
+            header("Location: " . option('base_uri') . "&error=You are not authorized to view the list of users!");
+            exit;
+        }
+    	
         $result = mysql_query("SELECT * FROM user ORDER BY username ASC");
         while($row = mysql_fetch_array($result))
         {
