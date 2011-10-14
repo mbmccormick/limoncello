@@ -103,6 +103,15 @@
         }
     }
     
+    function login_openid_remove()
+    {
+        $sql = "UPDATE user SET identity = null WHERE id = '$_SESSION[CurrentUser_ID]'";
+        mysql_query($sql);
+        
+        header("Location: " . option('base_uri') . "user/" . $_SESSION[CurrentUser_ID] . "&success=Your Google Account was successfully removed from your user!");
+        exit;
+    }
+    
     function logout()
     {
         if (Security_Logout() == true)
