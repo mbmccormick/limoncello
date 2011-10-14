@@ -1,26 +1,5 @@
 <?php
 
-    function user_view()
-    {
-        Security_Authorize();
-        
-        $result = mysql_query("SELECT * FROM user WHERE id='" . params('id') . "'");
-        $user = mysql_fetch_array($result);
-        
-        if ($user != null)
-        {
-            set("title", $user[username]);
-            set("user", $user);
-            return html("user/view.php");
-        }
-        else
-        {
-            set("title", "User Not Found");
-            set("type", "user");
-            return html("common/notfound.php");
-        }
-    }
-    
     function user_list()
     {
         Security_Authorize();
@@ -39,7 +18,7 @@
             $body .= "&nbsp;&nbsp;\n";
             $body .= "</td>\n";
             $body .= "<td valign='middle' style='width: 100%;'>\n";
-            $body .= "<h3><a href='" . option('base_uri') . "user/$row[id]'>" . $row[name] . "</a></h3>\n";
+            $body .= "<h3><a href='" . option('base_uri') . "users/$row[id]'>" . $row[name] . "</a></h3>\n";
             $body .= "<p>Created on " . date("F j, Y", strtotime($row[createddate])) . "</p>\n";
             $body .= "</td>\n";
             $body .= "</tr>\n";
@@ -66,7 +45,7 @@
         
         if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
         {
-            header("Location: " . option('base_uri') . "user/" . params('id') . "&error=You are not authorized to add a new user!");
+            header("Location: " . option('base_uri') . "users&error=You are not authorized to add a new user!");
             exit;
         }
 		
@@ -80,7 +59,7 @@
         
         if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
         {
-            header("Location: " . option('base_uri') . "user/" . params('id') . "&error=You are not authorized to add a new user!");
+            header("Location: " . option('base_uri') . "users&error=You are not authorized to add a new user!");
             exit;
         }
 		
@@ -94,7 +73,7 @@
         }
         else
         {
-            header("Location: " . option('base_uri') . "user/add&error=Your passwords do not match!");
+            header("Location: " . option('base_uri') . "users/add&error=Your passwords do not match!");
             exit;
         }
         
@@ -111,7 +90,7 @@
         if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
             $_SESSION["CurrentUser_ID"] != params('id'))
         {
-            header("Location: " . option('base_uri') . "user/" . params('id') . "&error=You are not authorized to edit this user!");
+            header("Location: " . option('base_uri') . "users&error=You are not authorized to edit that user!");
             exit;
         }
 		
@@ -139,7 +118,7 @@
         if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
             $_SESSION["CurrentUser_ID"] != params('id'))
         {
-            header("Location: " . option('base_uri') . "user/" . params('id') . "&error=You are not authorized to edit this user!");
+            header("Location: " . option('base_uri') . "users&error=You are not authorized to edit that user!");
             exit;
         }
 		
@@ -164,7 +143,7 @@
         
         mysql_close($con);
         
-        header("Location: " . option('base_uri') . "user/$user[id]/edit&success=Your user was updated successfully!");
+        header("Location: " . option('base_uri') . "users/$user[id]&success=Your user was updated successfully!");
         exit;
     }
     
@@ -175,7 +154,7 @@
         if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
             $_SESSION["CurrentUser_ID"] != params('id'))
         {
-            header("Location: " . option('base_uri') . "user/" . params('id') . "&error=You are not authorized to delete this user!");
+            header("Location: " . option('base_uri') . "users/" . params('id') . "&error=You are not authorized to delete this user!");
             exit;
         }
     
