@@ -25,10 +25,12 @@
                             echo "<a href='" . option('base_uri') . "'>Dashboard</a>\n";
                         }
                         
-                        if (strpos($_SERVER[REQUEST_URI], option('base_uri') . "users") === 0) {
-                            echo "<a href='" . option('base_uri') . "users' class='selected'>Users</a>\n";
-                        } else {
-                            echo "<a href='" . option('base_uri') . "users'>Users</a>\n";
+                        if ($_SESSION[CurrentUser_IsAdministrator] == "1") {
+                            if (strpos($_SERVER[REQUEST_URI], option('base_uri') . "users") === 0) {
+                                echo "<a href='" . option('base_uri') . "users' class='selected'>Users</a>\n";
+                            } else {
+                                echo "<a href='" . option('base_uri') . "users'>Users</a>\n";
+                            }
                         }
                         
                     ?>
