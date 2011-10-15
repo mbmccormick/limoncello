@@ -13,24 +13,16 @@
         $result = mysql_query("SELECT * FROM user ORDER BY username ASC");
         while($row = mysql_fetch_array($result))
         {
-            $body .= "<div class='list-item user'>\n";
-            
-            $body .= "<table cellpadding='0' cellspacing='0' style='width: 100%;'>\n";
             $body .= "<tr>\n";
-            $body .= "<td valign='middle'>\n";
-            $body .= "<img src='http://www.gravatar.com/avatar/" . md5($row[email]) . "?s=45' style='background-color: #ffffff; padding: 2px; border: solid 1px #dddddd;' />";
-            $body .= "</td>";
-            $body .= "<td>\n";
-            $body .= "&nbsp;&nbsp;\n";
-            $body .= "</td>\n";
-            $body .= "<td valign='middle' style='width: 100%;'>\n";
-            $body .= "<h3><a href='" . option('base_uri') . "users/$row[id]'>" . $row[name] . "</a></h3>\n";
-            $body .= "<p>Created on " . date("F j, Y", strtotime($row[createddate])) . "</p>\n";
-            $body .= "</td>\n";
-            $body .= "</tr>\n";
-            $body .= "</table>\n";
             
-            $body .= "</div>\n";
+            $body .= "<td>\n";
+            $body .= $row[name];
+            $body .= "</td>\n";
+			$body .= "<td>\n";
+            $body .= "<a href='" . option('base_uri') . "users/$row[id]'>Edit</a>\n";
+            $body .= "</td>\n";
+            
+            $body .= "</tr>\n";
         }
         
         if (mysql_num_rows($result) == 0)
