@@ -27,9 +27,9 @@
         
         if (mysql_num_rows($result) == 0)
         {
-            $body .= "<div class='list-item user'>\n";
-            $body .= "<p>There are currently no users setup.</p>\n";
-            $body .= "</div>\n";
+            $body .= "<tr>\n";
+            $body .= "<td colspan='2'>There are currently no users setup.</td>\n";
+            $body .= "</tr>\n";
         }
         
         set("title", "Users");
