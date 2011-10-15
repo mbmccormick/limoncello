@@ -61,6 +61,15 @@
             exit;
         }
 		
+		$sql = mysql_query("SELECT COUNT(*) AS rowcount FROM user WHERE email='" . mysql_real_escape_string($_POST[email]) . "'");
+		$return = mysql_fetch_array($sql);
+		
+		if ($return[rowcount] > 0)
+		{
+			header("Location: " . option('base_uri') . "users/add&error=A user with that email address already exists!");
+            exit;
+		}
+		
         $now = date("Y-m-d H:i:s");
         
         if ($user[password] == $user[passwordconfirm])
