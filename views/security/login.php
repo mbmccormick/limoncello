@@ -12,9 +12,9 @@
         </table>
         <br />
         <form id="login" action="<?=option('base_uri')?>login" method="post">
-            <label for="Username">
-                Username<br />
-                <input class="text" name="username" style="width: 290px;" type="text" />
+            <label for="Email">
+                Email Address<br />
+                <input class="text" name="email" style="width: 290px;" type="text" />
             </label>
             <label for="password">
                 Password <small>(<a href="<?=option('base_uri')?>login/reset">Trouble logging in?</a>)</small><br />

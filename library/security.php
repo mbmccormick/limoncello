@@ -1,8 +1,8 @@
 <?php
 
-    function Security_Login($username, $password)
+    function Security_Login($email, $password)
     {
-        $sql = mysql_query("SELECT * FROM user WHERE username='" . mysql_real_escape_string($username) . "' AND password='" . md5(mysql_real_escape_string($password)) . "'");
+        $sql = mysql_query("SELECT * FROM user WHERE email='" . mysql_real_escape_string($email) . "' AND password='" . md5(mysql_real_escape_string($password)) . "'");
         
         if (mysql_num_rows($sql) > 0)
         {
@@ -10,7 +10,6 @@
             
             $_SESSION["CurrentUser_ID"] = $row[id];
             $_SESSION["CurrentUser_Name"] = $row[name];
-            $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_Email"] = $row[email];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
         
@@ -32,7 +31,6 @@
             
             $_SESSION["CurrentUser_ID"] = $row[id];
             $_SESSION["CurrentUser_Name"] = $row[name];
-            $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_Email"] = $row[email];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
         
@@ -70,7 +68,6 @@
             
             $_SESSION["CurrentUser_ID"] = $row[id];
             $_SESSION["CurrentUser_Name"] = $row[name];
-            $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_Email"] = $row[email];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
         }

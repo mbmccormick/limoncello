@@ -9,7 +9,7 @@
     
     function login_post()
     {
-        if (Security_Login($_POST[username], $_POST[password]) == true)
+        if (Security_Login($_POST[email], $_POST[password]) == true)
         {
             if (isset($_SESSION[CurrentUser_Identity]))
             {

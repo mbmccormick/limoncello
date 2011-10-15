@@ -14,10 +14,7 @@
                             <input type="text" name="name" style="width: 333px;" /><br />
                             <br />
                             <br />
-                            <b>Username</b><br />
-                            <input type="text" name="username" style="width: 333px;" /><br />
-                            <br />
-                            <b>Email</b><br />                    
+                            <b>Email Address</b><br />                    
                             <input type="text" name="email" style="width: 333px;" /><br />
                             <br />
                             <br />
@@ -44,14 +41,14 @@
             </td>
             <td style="width: 50%;">
                 <div class="standard-form help">
-                    <b>Displaying avatars from Gravatar</b><br />
-                    <br />
-                    This email address will be used to display this user's avatar from <a href="http://www.gravatar.com/" target="_blank">Gravatar</a>.
-                </div>
-                <div class="standard-form help">
                     <b>Double check this email address</b><br />
                     <br />
                     This user must be able to receive email at this address in order to reset their password.
+                </div>
+				<div class="standard-form help">
+                    <b>Default password</b><br />
+                    <br />
+                    Specify a default password for this user, they can change it after they login for the first time.
                 </div>
             </td>
         </tr>

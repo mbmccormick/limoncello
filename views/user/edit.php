@@ -14,10 +14,7 @@
                             <input type="text" name="name" style="width: 333px;" value="<?=$user[name]?>" /><br />
                             <br />
                             <br />
-                            <b>Username</b><br />
-                            <input type="text" name="username" style="width: 333px;" value="<?=$user[username]?>" /><br />
-                            <br />
-                            <b>Email</b><br />                    
+                            <b>Email Address</b><br />                    
                             <input type="text" name="email" style="width: 333px;" value="<?=$user[email]?>" /><br />
                             <br />
                             <br />
@@ -50,11 +47,6 @@
                 </div>
             </td>
             <td style="width: 50%;">
-                <div class="standard-form help">
-                    <b>Update your avatar at Gravatar</b><br />
-                    <br />
-                    You can update the avatar for your account by uploading a new one at <a href="http://www.gravatar.com/" target="_blank">Gravatar</a> using your email address.
-                </div>
                 <div class="standard-form help">
                     <b>Change your password</b><br />
                     <br />

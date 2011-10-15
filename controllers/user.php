@@ -10,7 +10,7 @@
             exit;
         }
     	
-        $result = mysql_query("SELECT * FROM user ORDER BY username ASC");
+        $result = mysql_query("SELECT * FROM user ORDER BY name ASC");
         while($row = mysql_fetch_array($result))
         {
             $body .= "<tr>\n";
@@ -65,8 +65,8 @@
         
         if ($user[password] == $user[passwordconfirm])
         {
-            $sql = "INSERT INTO user (name, username, password, email, isadministrator, createddate) VALUES
-                    ('" . mysql_real_escape_string($_POST[name]) . "', '" . mysql_real_escape_string($_POST[username]) . "', '" . md5(mysql_real_escape_string($_POST[password])) . "', '" . mysql_real_escape_string($_POST[email]) . "', '" . $_POST[isadministrator] . "', '" . $now . "')";
+            $sql = "INSERT INTO user (name, email, password, isadministrator, createddate) VALUES
+                    ('" . mysql_real_escape_string($_POST[name]) . "', '" . mysql_real_escape_string($_POST[email]) . "', '" . md5(mysql_real_escape_string($_POST[password])) . "', '" . $_POST[isadministrator] . "', '" . $now . "')";
             mysql_query($sql);
         }
         else
@@ -129,13 +129,13 @@
         {
             if ($user[newpassword] == $user[newpasswordconfirm])
             {
-                $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', username='" . mysql_real_escape_string($_POST[username]) . "', password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "', email='" . mysql_real_escape_string($_POST[email]) . "', isadministrator='" . $_POST[isadministrator] . "' WHERE id='$user[id]'";
+                $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "', isadministrator='" . $_POST[isadministrator] . "' WHERE id='$user[id]'";
                 mysql_query($sql);
             }
         }
         else
         {
-            $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', username='" . mysql_real_escape_string($_POST[username]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', isadministrator='" . $_POST[isadministrator] . "' WHERE id='$user[id]'";
+            $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', isadministrator='" . $_POST[isadministrator] . "' WHERE id='$user[id]'";
             mysql_query($sql);
         }
         
