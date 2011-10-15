@@ -46,7 +46,7 @@
     dispatch('/login/openid/remove', 'login_openid_remove');
     dispatch('/logout', 'logout');
     
-    /* Declare User routes */
+    /* Declare Users routes */
     dispatch('/users', 'users_list');
     dispatch('/users/add', 'users_add');
     dispatch_post('/users/add', 'users_add_post');
