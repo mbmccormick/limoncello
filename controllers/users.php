@@ -34,7 +34,7 @@
         
         set("title", "Users");
         set("body", $body);
-        return html("user/list.php");
+        return html("users/list.php");
     }
     
     function users_add()
@@ -48,7 +48,7 @@
         }
 		
         set("title", "New User");
-        return html("user/add.php");
+        return html("users/add.php");
     }
     
     function users_add_post()
@@ -108,7 +108,7 @@
         {
             set("title", "Edit User");
             set("user", $user);
-            return html("user/edit.php");
+            return html("users/edit.php");
         }
         else
         {
