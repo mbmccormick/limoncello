@@ -15,7 +15,7 @@
 <body> 
     <?=$content?>
     <div class="footer">
-        <?=ApplicationName?> is powered by <a href="http://github.com/mbmccormick/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.
+        <?=ApplicationName?> is powered by <a href="http://github.com/mccormicktechnologies/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.
     </div>
     <div id="arrow-top" style="display: none;">
         &#9650;

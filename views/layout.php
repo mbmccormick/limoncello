@@ -62,7 +62,7 @@
     </div>
     <?=$content?>
     <div class="footer">
-        <a href="<?=option('base_uri')?>"><?=ApplicationName?></a> is powered by <a href="http://github.com/mbmccormick/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.
+        <a href="<?=option('base_uri')?>"><?=ApplicationName?></a> is powered by <a href="http://github.com/mccormicktechnologies/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.
     </div>
     <div id="arrow-top" style="display: none;">
         &#9650;
