@@ -46,7 +46,7 @@
                 <div class="standard-form help">
                     <b>Displaying avatars from Gravatar</b><br />
                     <br />
-                    This email address well be used to display this user's avatar from <a href="http://www.gravatar.com/" target="_blank">Gravatar</a>.
+                    This email address will be used to display this user's avatar from <a href="http://www.gravatar.com/" target="_blank">Gravatar</a>.
                 </div>
                 <div class="standard-form help">
                     <b>Double check this email address</b><br />
