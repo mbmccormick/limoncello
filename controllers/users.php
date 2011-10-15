@@ -1,10 +1,10 @@
 <?php
 
-    function user_list()
+    function users_list()
     {
         Security_Authorize();
     	
-    	if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+    	if ($_SESSION["Currentusers_IsAdministrator"] == "0")
         {
             header("Location: " . option('base_uri') . "&error=You are not authorized to view the list of users!");
             exit;
@@ -37,11 +37,11 @@
         return html("user/list.php");
     }
     
-    function user_add()
+    function users_add()
     {
         Security_Authorize();
         
-        if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+        if ($_SESSION["Currentusers_IsAdministrator"] == "0")
         {
             header("Location: " . option('base_uri') . "users&error=You are not authorized to add a new user!");
             exit;
@@ -51,11 +51,11 @@
         return html("user/add.php");
     }
     
-    function user_add_post()
+    function users_add_post()
     {
         Security_Authorize();
         
-        if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+        if ($_SESSION["Currentusers_IsAdministrator"] == "0")
         {
             header("Location: " . option('base_uri') . "users&error=You are not authorized to add a new user!");
             exit;
@@ -90,12 +90,12 @@
         exit;
     }
     
-    function user_edit()
+    function users_edit()
     {
         Security_Authorize();
         
-        if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
-            $_SESSION["CurrentUser_ID"] != params('id'))
+        if ($_SESSION["Currentusers_IsAdministrator"] == "0" &&
+            $_SESSION["Currentusers_ID"] != params('id'))
         {
             header("Location: " . option('base_uri') . "users&error=You are not authorized to edit that user!");
             exit;
@@ -118,12 +118,12 @@
         }
     }
     
-    function user_edit_post()
+    function users_edit_post()
     {
         Security_Authorize();
         
-        if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
-            $_SESSION["CurrentUser_ID"] != params('id'))
+        if ($_SESSION["Currentusers_IsAdministrator"] == "0" &&
+            $_SESSION["Currentusers_ID"] != params('id'))
         {
             header("Location: " . option('base_uri') . "users&error=You are not authorized to edit that user!");
             exit;
@@ -156,12 +156,12 @@
         exit;
     }
     
-    function user_delete()
+    function users_delete()
     {
         Security_Authorize();
         
-        if ($_SESSION["CurrentUser_IsAdministrator"] == "0" &&
-            $_SESSION["CurrentUser_ID"] != params('id'))
+        if ($_SESSION["Currentusers_IsAdministrator"] == "0" &&
+            $_SESSION["Currentusers_ID"] != params('id'))
         {
             header("Location: " . option('base_uri') . "users/" . params('id') . "&error=You are not authorized to delete this user!");
             exit;
