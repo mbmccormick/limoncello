@@ -2,7 +2,7 @@
 
     function Security_Login($email, $password)
     {
-        $sql = mysql_query("SELECT * FROM user WHERE email='" . mysql_real_escape_string($email) . "' AND password='" . md5(mysql_real_escape_string($password)) . "'");
+        $sql = mysql_query("SELECT * FROM user WHERE email='" . mysql_real_escape_string($email) . "' AND password='" . mysql_real_escape_string(md5($password)) . "'");
         
         if (mysql_num_rows($sql) > 0)
         {
@@ -23,7 +23,7 @@
     
     function Security_Login_OpenID($identity)
     {
-        $sql = mysql_query("SELECT * FROM user WHERE identity='" . $identity . "'");
+        $sql = mysql_query("SELECT * FROM user WHERE identity='" . mysql_real_escape_string($identity) . "'");
         
         if (mysql_num_rows($sql) > 0)
         {
@@ -60,7 +60,7 @@
     
     function Security_Refresh($id)
     {
-        $sql = mysql_query("SELECT * FROM user WHERE id='" . $id . "'");
+        $sql = mysql_query("SELECT * FROM user WHERE id='" . mysql_real_escape_string($id) . "'");
         
         if (mysql_num_rows($sql) > 0)
         {

@@ -75,7 +75,7 @@
         if ($user[password] == $user[passwordconfirm])
         {
             $sql = "INSERT INTO user (name, email, password, isadministrator, createddate) VALUES
-                    ('" . mysql_real_escape_string($_POST[name]) . "', '" . mysql_real_escape_string($_POST[email]) . "', '" . md5(mysql_real_escape_string($_POST[password])) . "', '" . $_POST[isadministrator] . "', '" . $now . "')";
+                    ('" . mysql_real_escape_string($_POST[name]) . "', '" . mysql_real_escape_string($_POST[email]) . "', '" . mysql_real_escape_string(md5($_POST[password])) . "', '" . mysql_real_escape_string($_POST[isadministrator]) . "', '" . $now . "')";
             mysql_query($sql);
         }
         else
@@ -101,7 +101,7 @@
             exit;
         }
 		
-        $result = mysql_query("SELECT * FROM user WHERE id='" . params('id') . "'");
+        $result = mysql_query("SELECT * FROM user WHERE id='" . mysql_real_escape_string(params('id')) . "'");
         $user = mysql_fetch_array($result);
         
         if ($user != null)
@@ -129,7 +129,7 @@
             exit;
         }
 		
-        $result = mysql_query("SELECT * FROM user WHERE id='" . params('id') . "'");
+        $result = mysql_query("SELECT * FROM user WHERE id='" . mysql_real_escape_string(params('id')) . "'");
         $user = mysql_fetch_array($result);
         
         $now = date("Y-m-d H:i:s");
@@ -138,13 +138,13 @@
         {
             if ($user[newpassword] == $user[newpasswordconfirm])
             {
-                $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "', isadministrator='" . $_POST[isadministrator] . "' WHERE id='$user[id]'";
+                $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "', isadministrator='" . mysql_real_escape_string($_POST[isadministrator]) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
                 mysql_query($sql);
             }
         }
         else
         {
-            $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', isadministrator='" . $_POST[isadministrator] . "' WHERE id='$user[id]'";
+            $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', isadministrator='" . mysql_real_escape_string($_POST[isadministrator]) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
             mysql_query($sql);
         }
         
@@ -167,7 +167,7 @@
             exit;
         }
     
-        $sql = "DELETE FROM user WHERE id='" . params('id') . "'";    
+        $sql = "DELETE FROM user WHERE id='" . mysql_real_escape_string(params('id')) . "'";    
         mysql_query($sql);
 
         header("Location: " . option('base_uri') . "users&success=Your user was deleted successfully!");
