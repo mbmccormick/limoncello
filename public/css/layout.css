@@ -616,7 +616,8 @@ form input.text,
 form input[type=text],
 form textarea,
 form input.password,
-form input[type=password] {
+form input[type=password],
+form select {
     border: 1px solid #C4C4C4;
     padding: 5px;
     font-family: helvetica, arial;
