@@ -84,8 +84,6 @@
             exit;
         }
         
-        mysql_close($con);
-        
         header("Location: " . option('base_uri') . "users&success=Your user was added successfully!");
         exit;
     }
@@ -147,8 +145,6 @@
             $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', isadministrator='" . mysql_real_escape_string($_POST[isadministrator]) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
             mysql_query($sql);
         }
-        
-        mysql_close($con);
         
         Security_Refresh(params('id'));
         
