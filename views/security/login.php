@@ -16,10 +16,12 @@
                     </div>
                 </div>
                 <div class="clearfix">
-                    <label>
-                        <input type="checkbox" name="rememberme" value="true">
-                        <span>Remember me</span>
-                    </label>
+                    <div class="input">
+                        <label>
+                            <input type="checkbox" name="rememberme" value="true">
+                            <span>Remember me</span>
+                        </label>
+                    </div>
                 </div>
             </fieldset>
             <div class="actions">
