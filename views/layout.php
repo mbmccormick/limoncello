@@ -30,9 +30,9 @@
                 <?php if ($_SESSION['CurrentUser_ID'] != null) { ?>
                 <p class="pull-right">Logged in as <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"><?=$_SESSION['CurrentUser_Username']?></a></p>
                 <?php } else { ?>
-                <form action="<?=option('base_uri')?>login" class="pull-right">
-                    <input class="input-small" type="text" placeholder="Username">
-                    <input class="input-small" type="password" placeholder="Password">
+                <form action="<?=option('base_uri')?>login" method="post" class="pull-right">
+                    <input name="username" class="input-small" type="text" placeholder="Username">
+                    <input name="password" class="input-small" type="password" placeholder="Password">
                     <button class="btn" type="submit">Sign in</button>
                 </form>
                 <?php } ?>

@@ -9,11 +9,11 @@
     
     function login_post()
     {
-        if (Security_Login($_POST[email], $_POST[password]) == true)
+        if (Security_Login($_POST['username'], $_POST['password']) == true)
         {
-            if (isset($_SESSION[CurrentUser_Identity]))
+            if (isset($_SESSION['CurrentUser_Identity']))
             {
-                $sql = "UPDATE user SET identity='" . mysql_real_escape_string($_SESSION[CurrentUser_Identity]) . "' WHERE id='" . mysql_real_escape_string($_SESSION[CurrentUser_ID]) . "'";
+                $sql = "UPDATE user SET identity='" . mysql_real_escape_string($_SESSION['CurrentUser_Identity']) . "' WHERE id='" . mysql_real_escape_string($_SESSION['CurrentUser_ID']) . "'";
                 mysql_query($sql);
                 
                 header("Location: " . option('base_uri') . "&success=Your Google Account was linked to " . ApplicationName . " successfully!");
@@ -40,7 +40,7 @@
     
     function login_reset_post()
     {
-        $result = mysql_query("SELECT * FROM user WHERE email='" . mysql_real_escape_string($_POST[email]) . "'");
+        $result = mysql_query("SELECT * FROM user WHERE email='" . mysql_real_escape_string($_POST['email']) . "'");
         $user = mysql_fetch_array($result);
         
         $password = "";
@@ -50,9 +50,9 @@
             $password .= $d ? chr(rand(65, 90)) : chr(rand(48, 57)); 
         }
         
-        if (mail($user[email], "Your New " . ApplicationName . " Password", "You recently requested a new password for " . ApplicationName . ". Your new password is " . $password . ".\n\n--\n" . ApplicationName . "", "From: " . ApplicationName . " <" . EmailAddress . ">") == true)
+        if (mail($user['email'], "Your New " . ApplicationName . " Password", "You recently requested a new password for " . ApplicationName . ". Your new password is " . $password . ".\n\n--\n" . ApplicationName . "", "From: " . ApplicationName . " <" . EmailAddress . ">") == true)
         {        
-            $sql = "UPDATE user SET password='" . mysql_real_escape_string(md5($password)) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
+            $sql = "UPDATE user SET password='" . mysql_real_escape_string(md5($password)) . "' WHERE id='" . mysql_real_escape_string($user['id']) . "'";
             mysql_query($sql);
             
             header("Location: " . option('base_uri') . "login&success=Your password has been reset and a new one was just emailed to you!");
@@ -84,7 +84,7 @@
             }
             else
             {
-                $_SESSION[CurrentUser_Identity] = $openid->identity;
+                $_SESSION['CurrentUser_Identity'] = $openid->identity;
                 header("Location: " . option('base_uri') . "login&warning=Please login to " . ApplicationName . " to finish linking your Google Account.");
                 exit;
             }
@@ -105,10 +105,10 @@
     
     function login_openid_remove()
     {
-        $sql = "UPDATE user SET identity = null WHERE id = '" . mysql_real_escape_string($_SESSION[CurrentUser_ID]) . "'";
+        $sql = "UPDATE user SET identity = null WHERE id = '" . mysql_real_escape_string($_SESSION['CurrentUser_ID']) . "'";
         mysql_query($sql);
         
-        header("Location: " . option('base_uri') . "users/" . $_SESSION[CurrentUser_ID] . "&success=Your Google Account was successfully removed from your user!");
+        header("Location: " . option('base_uri') . "users/" . $_SESSION['CurrentUser_ID'] . "&success=Your Google Account was successfully removed from your user!");
         exit;
     }
     
