@@ -22,14 +22,17 @@
         <div class="fill">
             <div class="container">
                 <a class="brand" href="<?=option('base_uri')?>"><?=ApplicationName?></a>
+                <?php if ($_SESSION['CurrentUser_ID'] != null) { ?>
+                <ul class="nav">
+                    <li class="active"><a href="<?=option('base_uri')?>">Dashboard</a></li>
+                    <li><a href="<?=option('base_uri')?>users">Users</a></li>
+                </ul>
+                <p class="pull-right">Logged in as <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"><?=$_SESSION['CurrentUser_Username']?></a></p>
+                <?php } else { ?>
                 <ul class="nav">
                     <li class="active"><a href="<?=option('base_uri')?>">Home</a></li>
                     <li><a href="<?=option('base_uri')?>about">About</a></li>
-                    <li><a href="<?=option('base_uri')?>contact">Contact</a></li>
                 </ul>
-                <?php if ($_SESSION['CurrentUser_ID'] != null) { ?>
-                <p class="pull-right">Logged in as <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"><?=$_SESSION['CurrentUser_Username']?></a></p>
-                <?php } else { ?>
                 <form action="<?=option('base_uri')?>login" method="post" class="pull-right">
                     <input name="username" class="input-small" type="text" placeholder="Username">
                     <input name="password" class="input-small" type="password" placeholder="Password">
