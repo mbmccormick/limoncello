@@ -8,10 +8,18 @@
                     <div class="input">
                         <input class="xlarge" id="username" name="username" size="30" type="text">
                     </div>
+                </div>
+                <div class="clearfix">
                     <label for="password">Password</label>
                     <div class="input">
                         <input class="xlarge" id="password" name="password" size="30" type="password">
                     </div>
+                </div>
+                <div class="clearfix">
+                    <label>
+                        <input type="checkbox" name="rememberme" value="true">
+                        <span>Remember me</span>
+                    </label>
                 </div>
             </fieldset>
             <div class="actions">
