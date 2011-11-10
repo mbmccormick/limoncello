@@ -3,8 +3,9 @@
     function login()
     {
         set("identity", $_SESSION[CurrentUser_Identity]);
-        set("title", "Login");
-        return html("security/login.php", "basic.php");
+        set("title", "Sign in");
+        set("description", "Sign into the application with your account credentials.");
+        return html("security/login.php", "layout.php");
     }
     
     function login_post()
