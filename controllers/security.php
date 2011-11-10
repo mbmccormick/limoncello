@@ -108,7 +108,7 @@
         $sql = "UPDATE user SET identity = null WHERE id = '" . mysql_real_escape_string($_SESSION[CurrentUser_ID]) . "'";
         mysql_query($sql);
         
-        header("Location: " . option('base_uri') . "user/" . $_SESSION[CurrentUser_ID] . "&success=Your Google Account was successfully removed from your user!");
+        header("Location: " . option('base_uri') . "users/" . $_SESSION[CurrentUser_ID] . "&success=Your Google Account was successfully removed from your user!");
         exit;
     }
     
