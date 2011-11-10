@@ -14,5 +14,11 @@
             return html("static/home.php");
         }
     }
+    
+    function common_about()
+    {
+        set("title", "About");
+        return html("static/about.php");
+    }
 
 ?>
