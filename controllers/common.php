@@ -2,9 +2,8 @@
 
 	function common_dashboard()
 	{
-		Security_Authorize();
-    
-        set("title", "Dashboard");
+		set("title", "Dashboard");
+        set("description", "This is the home page of the application.");
 		return html("common/dashboard.php");
 	}
 

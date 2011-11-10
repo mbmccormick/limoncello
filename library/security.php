@@ -1,8 +1,8 @@
 <?php
 
-    function Security_Login($email, $password)
+    function Security_Login($username, $password)
     {
-        $sql = mysql_query("SELECT * FROM user WHERE email='" . mysql_real_escape_string($email) . "' AND password='" . mysql_real_escape_string(md5($password)) . "'");
+        $sql = mysql_query("SELECT * FROM user WHERE username='" . mysql_real_escape_string($username) . "' AND password='" . mysql_real_escape_string(md5($password)) . "'");
         
         if (mysql_num_rows($sql) > 0)
         {
@@ -10,7 +10,7 @@
             
             $_SESSION["CurrentUser_ID"] = $row[id];
             $_SESSION["CurrentUser_Name"] = $row[name];
-            $_SESSION["CurrentUser_Email"] = $row[email];
+            $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
         
             return true;
@@ -31,7 +31,7 @@
             
             $_SESSION["CurrentUser_ID"] = $row[id];
             $_SESSION["CurrentUser_Name"] = $row[name];
-            $_SESSION["CurrentUser_Email"] = $row[email];
+            $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
         
             return true;
@@ -53,7 +53,7 @@
     {
         if ($_SESSION["CurrentUser_ID"] == null)
         {
-            header("Location: login");
+            header("Location: " . option('base_uri') . "login");
             exit;
         }
     }
@@ -68,7 +68,7 @@
             
             $_SESSION["CurrentUser_ID"] = $row[id];
             $_SESSION["CurrentUser_Name"] = $row[name];
-            $_SESSION["CurrentUser_Email"] = $row[email];
+            $_SESSION["CurrentUser_Username"] = $row[username];
             $_SESSION["CurrentUser_IsAdministrator"] = $row[isadministrator];
         }
     }
