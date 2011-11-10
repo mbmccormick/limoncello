@@ -37,6 +37,11 @@ body {
 }
 
 .content .span4 {
+    width: 560px;
+	padding-right: 20px;
+}
+
+.content .span4 {
     margin-left: 0;
     padding-left: 19px;
     border-left: 1px solid #eee;
