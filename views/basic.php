@@ -4,7 +4,7 @@
     <meta charset="utf-8" /> 
     <title><?=ApplicationName?> - <?=$title?></title> 
     <link rel="stylesheet" href="<?=option('base_uri')?>public/css/bootstrap.css" />
-    <link rel="stylesheet" href="<?=option('base_uri')?>public/css/layout.css" />
+    <link rel="stylesheet" href="<?=option('base_uri')?>public/css/basic.css" />
     <link rel="shortcut icon" type="image/x-icon" href="<?=option('base_uri')?>public/img/logo.ico">
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-alerts.js"></script>
@@ -18,22 +18,8 @@
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/common.js"></script>
 </head> 
 <body>
-    <div class="topbar">
-        <div class="fill">
-            <div class="container">
-                <a class="brand" href="<?=option('base_uri')?>"><?=ApplicationName?></a>
-                <ul class="nav">
-                    <li class="active"><a href="<?=option('base_uri')?>">Dashboard</a></li>
-                    <li><a href="<?=option('base_uri')?>users">Users</a></li>
-                </ul>
-                <p class="pull-right">Logged in as <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"><?=$_SESSION['CurrentUser_Username']?></a></p>
-            </div>
-        </div>
-    </div>
     <div class="container">
-        <div class="content">
-            <?=$content?>
-        </div>
+        <?=$content?>
         <footer>
             <p><a href="<?=option('base_uri')?>"><?=ApplicationName?></a> is powered by <a href="http://github.com/mccormicktechnologies/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.</p>
         </footer>

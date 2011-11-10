@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1><?=$title?> <small><?=$description?></small></h1>
+    <h1><?=$title?></h1>
 </div>
 <div class="row">
     <div class="span8">

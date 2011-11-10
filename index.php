@@ -35,7 +35,6 @@
     
     /* Declare Common routes */
     dispatch('/', 'common_dashboard');
-    dispatch('/about', 'common_about');
 	
     /* Declare Security routes */
     dispatch('/login', 'login');

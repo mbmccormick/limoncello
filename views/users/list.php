@@ -1,16 +1,17 @@
-<div class="content">
-    <div class="navigation">
-        <a href="<?=option('base_uri')?>users">Users</a>
-    </div>
-    <table class="data-table" cellpadding="0" cellspacing="0" style="width: 100%;">
+<div class="page-header">
+    <h1><?=$title?></h1>
+</div>
+<table class="bordered-table">
+	<thead>
 		<tr>
 			<th>Name</th>
 			<th style="width: 100px;">Actions</th>
 		</tr>
-        <?=$body?>
-    </table>
-    <br />
-    <button type="button" class="button" onclick="location.href='<?=option('base_uri')?>users/add';">
-        <span>New User</span>
-    </button>
+	</thead>
+	<tbody>
+		<?=$body?>
+	</tbody>
+</table>
+<div class="well">
+	<a href="<?=option('base_uri')?>users/add" class="btn large primary">New User</a>
 </div>
