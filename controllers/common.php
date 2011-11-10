@@ -1,7 +1,7 @@
 <?php
 
-	function common_dashboard()
-	{
+    function common_dashboard()
+    {
         if ($_SESSION['CurrentUser_ID'] != null)
         {
             set("title", "Dashboard");
@@ -13,6 +13,6 @@
             set("title", "Home");
             return html("static/home.php");
         }
-	}
+    }
 
 ?>
