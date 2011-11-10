@@ -68,7 +68,7 @@
     $("#user-edit").submit(function validate() {
         var formData = $("#user-edit").serializeArray();
         for (var i=0; i < formData.length; i++) { 
-            if (formData[i].contains("password")) continue;
+            if (formData[i].name == "password") continue;
             
             if (!formData[i].value) { 
                 $(document).showMessage({
