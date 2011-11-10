@@ -1,41 +1,23 @@
-<div class="content">
-    <div class="login-form">
-        <table cellpadding="0" cellspacing="0" style="width: 100%;">
-            <tr>
-                <td align="left" valign="middle">
-                    <h2><a href="<?=option('base_uri')?>"><?=ApplicationName?></a></h2>
-                </td>
-                <td align="right" valign="middle">
-                    &nbsp;
-                </td>
-            </tr>
-        </table>
-        <br />
-        <form id="login" action="<?=option('base_uri')?>login" method="post">
-            <label for="Email">
-                Email Address<br />
-                <input class="text" name="email" style="width: 290px;" type="text" />
-            </label>
-            <label for="password">
-                Password <small>(<a href="<?=option('base_uri')?>login/reset">Trouble logging in?</a>)</small><br />
-                <input class="text" name="password" style="width: 290px;" type="password" />
-            </label>
-            <input name="identity" type="hidden" value="<?=$identity?>" />
-            <br />
-            <br />
-            <table cellpadding="0" cellspacing="0" style="width: 100%;">
-                <tr>
-                    <td align="left" valign="middle">
-                        <button type="submit" class="button">
-                            <span>Log In</span>
-                        </button>
-                    </td>
-                    <td align="right" valign="middle">
-                        <small><img src="<?=option('base_uri')?>public/img/google.png" id="google" /><a onclick="authenticateOpenID()" href="#">Log In with your Google Account</a></small>
-                    </td>
-                </tr>
-            </table>
-        </form>  
+<div class="row">
+    <div class="span8">
+        <form action="<?=option('base_uri')?>login" method="post" class="form-stacked">
+            <fieldset>
+                <legend>Sign in to <?=ApplicationName?></legend>
+                <div class="clearfix">
+                    <label for="username">Username</label>
+                    <div class="input">
+                        <input class="xlarge" id="username" name="username" size="30" type="text">
+                    </div>
+                    <label for="password">Password</label>
+                    <div class="input">
+                        <input class="xlarge" id="password" name="password" size="30" type="password">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="actions">
+                <button type="submit" class="btn primary">Sign in</button>&nbsp;<button type="reset" class="btn">Cancel</button>
+            </div>
+        </form>
     </div>
 </div>
 
