@@ -4,7 +4,7 @@
     <p><a class="btn primary large" href="<?=option('base_uri')?>about">Learn more »</a></p>
 </div>
 <div class="row">
-    <div class="span5">
+    <div class="span6">
         <h2>Heading</h2>
         <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     </div>
