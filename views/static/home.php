@@ -15,6 +15,7 @@
         <p><a class="btn" href="#">View details »</a></p>
     </div>
 </div>
+<hr>
 <div class="row">
     <div class="span7">
         <h2>Heading</h2>
@@ -27,6 +28,7 @@
         <p><a class="btn" href="#">View details »</a></p>
     </div>
 </div>
+<hr>
 <div class="row">
     <div class="span7">
         <h2>Heading</h2>
