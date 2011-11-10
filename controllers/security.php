@@ -4,7 +4,7 @@
     {
         set("identity", $_SESSION[CurrentUser_Identity]);
         set("title", "Sign in");
-        set("description", "Sign into the application with your account credentials.");
+        set("description", "Sign in to the application with your account credentials.");
         return html("security/login.php", "layout.php");
     }
     
