@@ -41,9 +41,6 @@
     </div>
     <div class="container">
         <div class="content">
-            <div class="page-header">
-                <h1><?=$title?> <small><?=$description?></small></h1>
-            </div>
             <?=$content?>
         </div>
         <footer>

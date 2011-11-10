@@ -1,3 +1,6 @@
+<div class="page-header">
+    <h1><?=$title?> <small><?=$description?></small></h1>
+</div>
 <div class="row">
     <div class="span8">
         <form action="<?=option('base_uri')?>login" method="post" class="form-stacked">
