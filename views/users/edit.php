@@ -3,6 +3,12 @@
         <form action="<?=option('base_uri')?>users/<?=$user['id']?>/edit" method="post" class="form-stacked">
             <fieldset>
                 <div class="clearfix">
+                    <label for="username">Username</label>
+                    <div class="input">
+                        <input class="xlarge" id="username" name="username" size="30" type="text" value="<?=$user['username']?>">
+                    </div>
+                </div>
+                <div class="clearfix">
                     <label for="name">Name</label>
                     <div class="input">
                         <input class="xlarge" id="name" name="name" size="30" type="text" value="<?=$user['name']?>">
