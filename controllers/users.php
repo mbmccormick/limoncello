@@ -158,7 +158,10 @@
             mysql_query($sql);
         }
         
-        Security_Refresh(params('id'));
+        if ($_SESSION['CurrentUser_ID'] == params('id'))
+        {
+            Security_Refresh(params('id'));
+        }
         
         header("Location: " . option('base_uri') . "users/$user[id]&success=Your user was updated successfully!");
         exit;
