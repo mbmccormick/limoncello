@@ -44,7 +44,7 @@
             </fieldset>
             <br />
             <div class="actions">
-                <button type="submit" class="btn primary">Save User</button>&nbsp;<a href="<?=option('base_uri')?>users/<?=$user['id']?>/delete" class="btn">Delete</a>
+                <button type="submit" class="btn primary">Save User</button>&nbsp;<a onclick="return confirm('Are you sure you want to delete this user?');" href="<?=option('base_uri')?>users/<?=$user['id']?>/delete" class="btn">Delete</a>
             </div>
         </form>
     </div>
