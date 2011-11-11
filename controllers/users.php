@@ -9,12 +9,17 @@
             header("Location: " . option('base_uri') . "&error=You are not authorized to view the list of users!");
             exit;
         }
+		
+		$index = 1;
     	
         $result = mysql_query("SELECT * FROM user ORDER BY name ASC");
         while($row = mysql_fetch_array($result))
         {
             $body .= "<tr>\n";
             
+			$body .= "<th>\n";
+            $body .= $index;
+            $body .= "</th>\n";
             $body .= "<td>\n";
             $body .= $row[name];
             $body .= "</td>\n";
@@ -23,6 +28,8 @@
             $body .= "</td>\n";
             
             $body .= "</tr>\n";
+			
+			$index++;
         }
         
         if (mysql_num_rows($result) == 0)

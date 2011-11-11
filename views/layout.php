@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="<?=option('base_uri')?>public/css/layout.css" />
     <link rel="shortcut icon" type="image/x-icon" href="<?=option('base_uri')?>public/img/logo.ico">
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/jquery-1.7.min.js"></script>
-    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-alerts.js"></script>
-    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-buttons.js"></script>
-    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-alerts.js"></script>
+    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-twipsy.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-scrollspy.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-tabs.js"></script>
-    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-twipsy.js"></script>
+    <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-buttons.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/common.js"></script>
 </head> 
 <body>
@@ -23,10 +23,27 @@
             <div class="container">
                 <a class="brand" href="<?=option('base_uri')?>"><?=ApplicationName?></a>
                 <ul class="nav">
+					<?php if ($_SERVER['REQUEST_URI'] == option('base_uri')) { ?>
                     <li class="active"><a href="<?=option('base_uri')?>">Dashboard</a></li>
-                    <li><a href="<?=option('base_uri')?>users">Users</a></li>
+					<?php } else { ?>
+					<li><a href="<?=option('base_uri')?>">Dashboard</a></li>
+					<?php } ?>
+                    <?php if (strpos($_SERVER['REQUEST_URI'], option('base_uri') . "users") === 0) { ?>
+                    <li class="active"><a href="<?=option('base_uri')?>users">Users</a></li>
+					<?php } else { ?>
+					<li><a href="<?=option('base_uri')?>users">Users</a></li>
+					<?php } ?>
                 </ul>
-                <p class="pull-right">Logged in as <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"><?=$_SESSION['CurrentUser_Username']?></a></p>
+                <ul class="nav secondary-nav">
+					<li class="dropdown" data-dropdown="dropdown">
+						<a href="#" class="dropdown-toggle"><?=$_SESSION['CurrentUser_Name']?></a>
+						<ul class="dropdown-menu">
+							<li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Settings</a></li>
+							<li><a href="<?=option('base_uri')?>logout">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"></a>
             </div>
         </div>
     </div>

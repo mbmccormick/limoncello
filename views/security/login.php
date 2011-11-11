@@ -25,7 +25,7 @@
                 </div>
             </fieldset>
             <div class="actions">
-                <button type="submit" class="btn primary">Sign in</button>&nbsp;<button type="reset" class="btn">Cancel</button>
+                <button type="submit" class="btn primary">Login</button>&nbsp;<button type="reset" class="btn">Cancel</button>
             </div>
         </form>
     </div>

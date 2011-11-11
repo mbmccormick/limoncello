@@ -6,6 +6,7 @@
 		<table class="bordered-table">
 			<thead>
 				<tr>
+					<th>#</th>
 					<th>Name</th>
 					<th style="width: 100px;">Actions</th>
 				</tr>
