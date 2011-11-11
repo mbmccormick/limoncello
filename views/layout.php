@@ -49,6 +49,9 @@
     </div>
     <div class="container">
         <div class="content">
+            <div class="page-header">
+                <h1><?=$title?></h1>
+            </div>
             <?php if ($_GET['error'] != null) { ?>
             <div class="alert-message error">
                 <a class="close" href="#">&times;</a>
@@ -73,9 +76,6 @@
                 <p><strong><?=$_GET['info']?></strong></p>
             </div>
             <?php } ?>
-            <div class="page-header">
-                <h1><?=$title?></h1>
-            </div>
             <?=$content?>
         </div>
         <footer>
