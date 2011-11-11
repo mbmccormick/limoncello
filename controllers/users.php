@@ -146,6 +146,11 @@
                 $sql = "UPDATE user SET name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "', password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "', isadministrator='" . mysql_real_escape_string($_POST[isadministrator]) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
                 mysql_query($sql);
             }
+            else
+            {
+                header("Location: " . option('base_uri') . "users/$user[id]&error=Your new password does not match!");
+                exit;
+            }
         }
         else
         {
