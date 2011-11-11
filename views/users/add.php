@@ -8,6 +8,7 @@
                         <input class="xlarge" id="username" name="username" size="30" type="text">
                     </div>
                 </div>
+                <br />
                 <div class="clearfix">
                     <label for="name">Name</label>
                     <div class="input">
