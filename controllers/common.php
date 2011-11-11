@@ -3,9 +3,9 @@
     function common_dashboard()
     {
         Security_Authorize();
-		
-		set("title", "Dashboard");
-		return html("common/dashboard.php");
+        
+        set("title", "Dashboard");
+        return html("common/dashboard.php");
     }
 
 ?>

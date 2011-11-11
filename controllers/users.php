@@ -3,33 +3,33 @@
     function users_list()
     {
         Security_Authorize();
-    	
-    	if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
+        
+        if ($_SESSION["CurrentUser_IsAdministrator"] == "0")
         {
             header("Location: " . option('base_uri') . "&error=You are not authorized to view the list of users!");
             exit;
         }
-		
-		$index = 1;
-    	
+        
+        $index = 1;
+        
         $result = mysql_query("SELECT * FROM user ORDER BY name ASC");
         while($row = mysql_fetch_array($result))
         {
             $body .= "<tr>\n";
             
-			$body .= "<th>\n";
+            $body .= "<th>\n";
             $body .= $index;
             $body .= "</th>\n";
             $body .= "<td>\n";
             $body .= $row[name];
             $body .= "</td>\n";
-			$body .= "<td>\n";
+            $body .= "<td>\n";
             $body .= "<a href='" . option('base_uri') . "users/$row[id]'>Edit</a>\n";
             $body .= "</td>\n";
             
             $body .= "</tr>\n";
-			
-			$index++;
+            
+            $index++;
         }
         
         if (mysql_num_rows($result) == 0)
@@ -53,7 +53,7 @@
             header("Location: " . option('base_uri') . "users&error=You are not authorized to add a new user!");
             exit;
         }
-		
+        
         set("title", "New User");
         return html("users/add.php");
     }
@@ -67,16 +67,16 @@
             header("Location: " . option('base_uri') . "users&error=You are not authorized to add a new user!");
             exit;
         }
-		
-		$sql = mysql_query("SELECT COUNT(*) AS rowcount FROM user WHERE email='" . mysql_real_escape_string($_POST[email]) . "'");
-		$return = mysql_fetch_array($sql);
-		
-		if ($return[rowcount] > 0)
-		{
-			header("Location: " . option('base_uri') . "users/add&error=A user with that email address already exists!");
+        
+        $sql = mysql_query("SELECT COUNT(*) AS rowcount FROM user WHERE email='" . mysql_real_escape_string($_POST[email]) . "'");
+        $return = mysql_fetch_array($sql);
+        
+        if ($return[rowcount] > 0)
+        {
+            header("Location: " . option('base_uri') . "users/add&error=A user with that email address already exists!");
             exit;
-		}
-		
+        }
+        
         $now = date("Y-m-d H:i:s");
         
         if ($user[password] == $user[passwordconfirm])
@@ -105,7 +105,7 @@
             header("Location: " . option('base_uri') . "users&error=You are not authorized to edit that user!");
             exit;
         }
-		
+        
         $result = mysql_query("SELECT * FROM user WHERE id='" . mysql_real_escape_string(params('id')) . "'");
         $user = mysql_fetch_array($result);
         
@@ -133,7 +133,7 @@
             header("Location: " . option('base_uri') . "users&error=You are not authorized to edit that user!");
             exit;
         }
-		
+        
         $result = mysql_query("SELECT * FROM user WHERE id='" . mysql_real_escape_string(params('id')) . "'");
         $user = mysql_fetch_array($result);
         

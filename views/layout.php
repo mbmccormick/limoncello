@@ -23,32 +23,59 @@
             <div class="container">
                 <a class="brand" href="<?=option('base_uri')?>"><?=ApplicationName?></a>
                 <ul class="nav">
-					<?php if ($_SERVER['REQUEST_URI'] == option('base_uri')) { ?>
+                    <?php if ($_SERVER['REQUEST_URI'] == option('base_uri')) { ?>
                     <li class="active"><a href="<?=option('base_uri')?>">Dashboard</a></li>
-					<?php } else { ?>
-					<li><a href="<?=option('base_uri')?>">Dashboard</a></li>
-					<?php } ?>
+                    <?php } else { ?>
+                    <li><a href="<?=option('base_uri')?>">Dashboard</a></li>
+                    <?php } ?>
                     <?php if (strpos($_SERVER['REQUEST_URI'], option('base_uri') . "users") === 0) { ?>
                     <li class="active"><a href="<?=option('base_uri')?>users">Users</a></li>
-					<?php } else { ?>
-					<li><a href="<?=option('base_uri')?>users">Users</a></li>
-					<?php } ?>
+                    <?php } else { ?>
+                    <li><a href="<?=option('base_uri')?>users">Users</a></li>
+                    <?php } ?>
                 </ul>
                 <ul class="nav secondary-nav">
-					<li class="dropdown" data-dropdown="dropdown">
-						<a href="#" class="dropdown-toggle"><?=$_SESSION['CurrentUser_Name']?></a>
-						<ul class="dropdown-menu">
-							<li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Profile</a></li>
-							<li><a href="<?=option('base_uri')?>logout">Logout</a></li>
-						</ul>
-					</li>
-				</ul>
-				<a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"></a>
+                    <li class="dropdown" data-dropdown="dropdown">
+                        <a href="#" class="dropdown-toggle"><?=$_SESSION['CurrentUser_Name']?></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Profile</a></li>
+                            <li><a href="<?=option('base_uri')?>logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"></a>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="content">
+            <?php if ($_GET['error'] != null) { ?>
+            <div class="alert-message error">
+                <a class="close" href="#">&times;</a>
+                <p><strong><?=$_GET['error']?></strong></p>
+            </div>
+            <?php } ?>
+            <?php if ($_GET['warning'] != null) { ?>
+            <div class="alert-message warning">
+                <a class="close" href="#">&times;</a>
+                <p><strong><?=$_GET['warning']?></strong></p>
+            </div>
+            <?php } ?>
+            <?php if ($_GET['success'] != null) { ?>
+            <div class="alert-message success">
+                <a class="close" href="#">&times;</a>
+                <p><strong><?=$_GET['success']?></strong></p>
+            </div>
+            <?php } ?>
+            <?php if ($_GET['info'] != null) { ?>
+            <div class="alert-message info">
+                <a class="close" href="#">&times;</a>
+                <p><strong><?=$_GET['info']?></strong></p>
+            </div>
+            <?php } ?>
+            <div class="page-header">
+                <h1><?=$title?></h1>
+            </div>
             <?=$content?>
         </div>
         <footer>
