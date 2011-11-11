@@ -17,10 +17,8 @@
                 </div>
                 <div class="clearfix">
                     <div class="input">
-                        <label>
-                            <input type="checkbox" name="rememberme" value="true">
-                            <span>Remember me</span>
-                        </label>
+						<input type="checkbox" name="rememberme" value="true">
+                        <span>Remember me</span>
                     </div>
                 </div>
             </fieldset>

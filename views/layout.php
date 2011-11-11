@@ -38,7 +38,7 @@
 					<li class="dropdown" data-dropdown="dropdown">
 						<a href="#" class="dropdown-toggle"><?=$_SESSION['CurrentUser_Name']?></a>
 						<ul class="dropdown-menu">
-							<li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Settings</a></li>
+							<li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Profile</a></li>
 							<li><a href="<?=option('base_uri')?>logout">Logout</a></li>
 						</ul>
 					</li>

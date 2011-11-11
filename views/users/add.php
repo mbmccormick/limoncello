@@ -45,5 +45,8 @@
 		</form>
 	</div>
 	<div class="span4">
+		<h5>Page Description</h5>
+		<p>This page allows you to add a new user to the application. Make sure that the email address you provide is valid, as it will be used to reset the user's password.</p>
+		<br />
 	</div>
 </div>

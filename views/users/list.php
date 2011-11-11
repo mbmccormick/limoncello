@@ -20,5 +20,8 @@
 		</div>
 	</div>
 	<div class="span4">
+		<h5>Page Description</h5>
+		<p>This page shows the list of users currently setup for the application. This list allows you to view a user's information or create a new user.</p>
+		<br />
 	</div>
 </div>

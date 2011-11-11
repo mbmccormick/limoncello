@@ -52,5 +52,11 @@
 		</form>
 	</div>
 	<div class="span4">
+		<h5>Page Description</h5>
+		<p>This page allows you to edit a user's information. You also have the ability to delete a user from this page.</p>
+		<br />
+		<h5>Change Password</h5>
+		<p>You can change the password for this user by entering their existing password and then providing a new password for the user.</p>
+		<br />
 	</div>
 </div>
