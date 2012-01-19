@@ -44,7 +44,7 @@
                 <br />                
                 <div class="clearfix">
                     <div class="input">
-                        <input type="checkbox" name="isadministrator" value="1" <?php if ($user['isadministrator'] == 1) { ?>checked="true"<?php } ?>>
+                        <input type="checkbox" name="isadministrator" value="1" <?php if ($user['isadministrator'] == 1) { ?>checked="true"<?php } ?> <?php if ($_SESSION["CurrentUser_IsAdministrator"] != "1") { ?>disabled="true"<?php } ?>>
                         <span>This user is an administrator</span>
                     </div>
                 </div>
