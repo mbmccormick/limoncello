@@ -1,6 +1,6 @@
 <?php
 
-    function Security_Login($username, $password)
+    function Security_Login($username, $password, $rememberme = false)
     {
         $sql = mysql_query("SELECT * FROM user WHERE username='" . mysql_real_escape_string($username) . "' AND password='" . mysql_real_escape_string(md5($password)) . "'");
         

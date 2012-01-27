@@ -139,18 +139,16 @@
         
         $now = date("Y-m-d H:i:s");
         
-        if (md5($_POST[currentpassword]) == $user[password])
+        if ($_POST[newpassword] != "" &&
+            $_POST[newpassword] == $_POST[newpasswordconfirm])
         {
-            if ($user[newpassword] == $user[newpasswordconfirm])
-            {
-                $sql = "UPDATE user SET password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
-                mysql_query($sql);
-            }
-            else
-            {
-                header("Location: " . option('base_uri') . "users/$user[id]&error=Your new password does not match!");
-                exit;
-            }
+            $sql = "UPDATE user SET password='" . md5(mysql_real_escape_string($_POST[newpassword])) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";
+            mysql_query($sql);
+        }
+        else
+        {
+            header("Location: " . option('base_uri') . "users/$user[id]&error=Your new password does not match!");
+            exit;
         }
         
         $sql = "UPDATE user SET username='" . mysql_real_escape_string($_POST[username]) . "', name='" . mysql_real_escape_string($_POST[name]) . "', email='" . mysql_real_escape_string($_POST[email]) . "' WHERE id='" . mysql_real_escape_string($user[id]) . "'";

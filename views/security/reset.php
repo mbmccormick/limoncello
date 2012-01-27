@@ -14,9 +14,9 @@
         <form action="<?=option('base_uri')?>login/reset" method="post">
             <span class="help">Enter the email address for your account below and we will send you a new password.</span><br />
             <br />
-            <label for="Username">
+            <label for="email">
                 Email Address<br />
-                <input class="text" name="email" style="width: 290px;" type="text" />
+                <input class="text email" name="email" style="width: 290px;" type="text" />
             </label>
             <br />
             <button type="submit" class="button">

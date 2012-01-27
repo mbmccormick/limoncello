@@ -18,27 +18,20 @@
                 <div class="clearfix">
                     <label for="email">Email Address</label>
                     <div class="input">
-                        <input class="xlarge" id="email" name="email" size="30" type="text" value="<?=$user['email']?>">
-                    </div>
-                </div>
-                <br />
-                <div class="clearfix">
-                    <label for="currentpassword">Current Password</label>
-                    <div class="input">
-                        <input class="xlarge" id="currentpassword" name="currentpassword" size="30" type="password">
+                        <input class="xlarge email" id="email" name="email" size="30" type="text" value="<?=$user['email']?>">
                     </div>
                 </div>
                 <br />
                 <div class="clearfix">
                     <label for="newpassword">New Password</label>
                     <div class="input">
-                        <input class="xlarge" id="newpassword" name="newpassword" size="30" type="password">
+                        <input class="xlarge exclude" id="newpassword" name="newpassword" size="30" type="password">
                     </div>
                 </div>
                 <div class="clearfix">
                     <label for="newpasswordconfirm">Confirm New Password</label>
                     <div class="input">
-                        <input class="xlarge" id="newpasswordconfirm" name="newpasswordconfirm" size="30" type="password">
+                        <input class="xlarge exclude" id="newpasswordconfirm" name="newpasswordconfirm" size="30" type="password">
                     </div>
                 </div>
                 <br />                
