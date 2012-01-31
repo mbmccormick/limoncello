@@ -2,7 +2,15 @@
 
     function login()
     {
-        set("identity", $_SESSION[CurrentUser_Identity]);
+        if (isset($_COOKIE['email']) == true &&
+            isset($_COOKIE['password']) == true)
+        {
+            if (Security_CookieLogin($_COOKIE['email'], $_COOKIE['password']) == true)
+            {
+                header("Location: " . option('base_uri'));
+                exit;
+            }
+        }
         
         set("title", "Login");
         return html("security/login.php", "basic.php");
@@ -10,29 +18,18 @@
     
     function login_post()
     {
-        if (Security_Login($_POST['username'], $_POST['password']) == true)
+        if (Security_Login($_POST['username'], $_POST['password'], $_POST['rememberme']) == true)
         {
-            if (isset($_SESSION['CurrentUser_Identity']))
-            {
-                $sql = "UPDATE user SET identity='" . mysql_real_escape_string($_SESSION['CurrentUser_Identity']) . "' WHERE id='" . mysql_real_escape_string($_SESSION['CurrentUser_ID']) . "'";
-                mysql_query($sql);
-                
-                header("Location: " . option('base_uri') . "&success=Your Google Account was linked to " . ApplicationName . " successfully!");
-                exit;
-            }
-            else
-            {
-                header("Location: " . option('base_uri'));
-                exit;
-            }
+            header("Location: " . option('base_uri'));
+            exit;
         }
         else
         {
-            header("Location: " . option('base_uri') . "login&error=Please check your login credentials and try again.");
+            header("Location: " . option('base_uri') . "login?error=Please check your login credentials and try again.");
             exit;
         }
     }
-    
+
     function login_reset()
     {
         set("title", "Reset Password");
@@ -64,53 +61,6 @@
             header("Location: " . option('base_uri') . "login&error=Something went wrong, please contact our support team!");
             exit;
         }
-    }
-    
-    function login_openid_google()
-    {
-        $openid = new LightOpenID;
-        
-        if($openid->mode == 'cancel')
-        {
-            header("Location: " . option('base_uri') . "login&error=Please check your login credentials and try again.");
-            exit;
-        }
-        else
-        {
-            if ($openid->validate() &&
-                Security_Login_OpenID($openid->identity) == true)
-            {
-                header("Location: " . option('base_uri'));
-                exit;
-            }
-            else
-            {
-                $_SESSION['CurrentUser_Identity'] = $openid->identity;
-                header("Location: " . option('base_uri') . "login&warning=Please login to " . ApplicationName . " to finish linking your Google Account.");
-                exit;
-            }
-        }
-    }
-    
-    function login_openid_google_post()
-    {
-        $openid = new LightOpenID;
-        $openid->returnUrl = "http://" . $_SERVER['HTTP_HOST'] . option('base_uri') . "?/login/openid/google";
-            
-        if(!$openid->mode)
-        {
-            $openid->identity = "https://www.google.com/accounts/o8/id";
-            header("Location: " . $openid->authUrl());
-        }
-    }
-    
-    function login_openid_remove()
-    {
-        $sql = "UPDATE user SET identity = null WHERE id = '" . mysql_real_escape_string($_SESSION['CurrentUser_ID']) . "'";
-        mysql_query($sql);
-        
-        header("Location: " . option('base_uri') . "users/" . $_SESSION['CurrentUser_ID'] . "&success=Your Google Account was successfully removed from your user!");
-        exit;
     }
     
     function logout()
