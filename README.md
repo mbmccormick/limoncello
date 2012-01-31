@@ -3,6 +3,16 @@
 Limoncello is a lightweight PHP web application framework based on [Limonade](http://www.limonade-php.net/) and [Bootstrap](http://twitter.github.com/bootstrap/). Limoncello combines the power of Limonade's application framework with the style and standards of Twitter's Bootstrap toolkit, and adds a few goodies of it's own.
 
 
+## What's in the box
+
+Limoncello comes with a lot of features and tools that most web developers need when creating a new application. This makes it even easier for you to get started on your application. Here's what Limoncello has to offer:
+
+* User account management, permissions, and login functionality
+* Client-side validation through jQuery
+* Nifty success, warning, and error dialogs
+* CSS framework from Twitter's Bootstrap
+
+
 ## Installation
 
 Setting up Limoncello is fast and easy. You will need one MySQL database and a PHP hosting provider in order to run Limoncello. Once that is all set, follow the steps below:
