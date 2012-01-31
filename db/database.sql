@@ -5,7 +5,6 @@ CREATE TABLE IF NOT EXISTS `user` (
   `name` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `identity` varchar(1000) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `isadministrator` tinyint(11) NOT NULL,
   `createddate` datetime NOT NULL,
