@@ -139,24 +139,19 @@
         
         $now = date("Y-m-d H:i:s");
         
-        if ($_POST['newpassword'] != "" &&
-            $_POST['newpassword'] == $_POST['newpasswordconfirm'])
-        {
-            $sql = "UPDATE user SET password='" . md5(mysql_real_escape_string($_POST['newpassword'])) . "' WHERE id='" . mysql_real_escape_string($user['id']) . "'";
-            mysql_query($sql);
-        }
-        else
-        {
-            header("Location: " . option('base_uri') . "users/" . $user['id'] . "&error=Your new password does not match!");
-            exit;
-        }
-        
         $sql = "UPDATE user SET username='" . mysql_real_escape_string($_POST['username']) . "', name='" . mysql_real_escape_string($_POST['name']) . "', email='" . mysql_real_escape_string($_POST['email']) . "' WHERE id='" . mysql_real_escape_string($user['id']) . "'";
         mysql_query($sql);
         
         if ($_SESSION['CurrentUser_IsAdministrator'] == "1")
         {
             $sql = "UPDATE user SET isadministrator='" . mysql_real_escape_string($_POST['isadministrator']) . "' WHERE id='" . mysql_real_escape_string($user['id']) . "'";
+            mysql_query($sql);
+        }
+        
+        if ($_POST['newpassword'] != "" &&
+            $_POST['newpassword'] == $_POST['newpasswordconfirm'])
+        {
+            $sql = "UPDATE user SET password='" . md5(mysql_real_escape_string($_POST['newpassword'])) . "' WHERE id='" . mysql_real_escape_string($user['id']) . "'";
             mysql_query($sql);
         }
         
