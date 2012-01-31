@@ -16,7 +16,7 @@ Setting up Limoncello is fast and easy. You will need one MySQL database and a P
 
 ## Development
 
-Developing with Limoncello is extremely simple, since it's built on the idea of a MVC framework, without the models. This makes developing an application with Limoncello lightning fast. The controllers for your application are located in the `controllers/` folder and the views are located in the `views` folder. Take a look at the stock Users controllers and views to get a better understanding.
+Developing with Limoncello is extremely simple, since it's built on the idea of a MVC framework, without the models. This makes developing an application with Limoncello lightning fast. The controllers for your application are located in the `controllers/` folder and the views are located in the `views/` folder. Take a look at the stock Users controllers and views to get a better understanding.
 
 Routes for the web application are defined in the `index.php` file and can be tailored to fit your application's needs. Again, take a look at the stock Users routes to see how it's done.
 
