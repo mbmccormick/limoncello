@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="span10">
+    <div class="span6">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -13,10 +13,10 @@
             </tbody>
         </table>
         <div class="well">
-            <a href="<?=option('base_uri')?>users/add" class="btn primary">New User</a>
+            <a href="<?=option('base_uri')?>users/add" class="btn btn-primary">New User</a>
         </div>
     </div>
-    <div class="span4">
+    <div class="span2">
         <h5>Page Description</h5>
         <p>This page shows the list of users currently setup for the application. This list allows you to view a user's information or create a new user.</p>
         <br />
