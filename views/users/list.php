@@ -1,6 +1,6 @@
 <div class="row">
     <div class="span10">
-        <table class="bordered-table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>#</th>
