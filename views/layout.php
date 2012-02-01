@@ -4,7 +4,7 @@
     <meta charset="utf-8" /> 
     <title><?=ApplicationName?> - <?=$title?></title> 
     <link rel="stylesheet" href="<?=option('base_uri')?>public/css/bootstrap.css" />
-	<link rel="stylesheet" href="<?=option('base_uri')?>public/css/bootstrap.responsive.css" />
+    <link rel="stylesheet" href="<?=option('base_uri')?>public/css/bootstrap.responsive.css" />
     <link rel="stylesheet" href="<?=option('base_uri')?>public/css/layout.css" />
     <link rel="shortcut icon" type="image/x-icon" href="<?=option('base_uri')?>public/img/logo.ico">
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/jquery-1.7.min.js"></script>
@@ -12,8 +12,8 @@
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/common.js"></script>
 </head> 
 <body>
-    <div class="topbar">
-        <div class="fill">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
             <div class="container">
                 <a class="brand" href="<?=option('base_uri')?>"><?=ApplicationName?></a>
                 <ul class="nav">
@@ -28,9 +28,9 @@
                     <li><a href="<?=option('base_uri')?>users">Users</a></li>
                     <?php } ?>
                 </ul>
-                <ul class="nav secondary-nav">
-                    <li class="dropdown" data-dropdown="dropdown">
-                        <a href="#" class="dropdown-toggle"><?=$_SESSION['CurrentUser_Name']?></a>
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$_SESSION['CurrentUser_Name']?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Profile</a></li>
                             <li><a href="<?=option('base_uri')?>logout">Logout</a></li>
