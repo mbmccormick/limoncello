@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="span10">
-        <form action="<?=option('base_uri')?>users/add" method="post" class="form-stacked">
+    <div class="span8">
+        <form action="<?=option('base_uri')?>users/add" method="post" class="form-vertical">
             <fieldset>
                 <div class="clearfix">
                     <label for="username">Username</label>
