@@ -22,7 +22,7 @@
             </div>
         </fieldset>
         <div class="actions">
-            <button type="submit" class="btn primary">Login</button>&nbsp;<button type="reset" class="btn">Cancel</button>
+            <button type="submit" class="btn btn-primary">Login</button><a class="pull-right" href="<?=option('base_uri')?>login/reset">Forgot your password?</a>
         </div>
     </form>
 </div>
