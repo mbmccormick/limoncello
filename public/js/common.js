@@ -17,22 +17,34 @@ $(document).ready(function() {
         var formData = [];
         $("form.form-vertical input").each(function() { formData.push(this); });
 
+        var hasError = false;
+        var hasEmailError = false;
         for (var i=0; i < formData.length; i++) { 
             if (hasClass(formData[i], "exclude")) { 
                 continue;
             }
 
             if (!formData[i].value) { 
-                alert("Please complete all fields, check your input, and try again.")                
-                return false;
+                hasError = true;
+                formData[i].parent().parent().addClass("error");
             }
 
             if (hasClass(formData[i], "email")) { 
                 if (!validateEmail(formData[i].value)) {
-                    alert("Please enter a valid email address and try again.")                
-                    return false;
+                    hasEmailError = true;
+                    formData[i].parent().parent().addClass("error");
                 }
             }
+        }
+
+        if (hasError == true) {
+            alert("Please complete all fields, check your input, and try again.")                
+            return false;
+        }
+
+        if (hasEmailError == true) {
+            alert("Please enter a valid email address and try again.")                
+            return false;
         }
     });
 });
