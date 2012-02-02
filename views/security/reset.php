@@ -5,7 +5,7 @@
             <div class="control-group">
                 <label class="control-label" for="email">Email Address</label>
                 <div class="controls">
-                    <input class="input-xlarge email" id="email" name="email" type="text" />
+                    <input class="input-large email" id="email" name="email" type="text" />
                 </div>
             </div>
         </fieldset>
