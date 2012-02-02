@@ -4,13 +4,13 @@
             <div class="control-group">
                 <label class="control-label" for="username">Username</label>
                 <div class="controls">
-                    <input class="xlarge" id="username" name="username" type="text" />
+                    <input class="input-xlarge" id="username" name="username" type="text" />
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label" for="password">Password</label>
                 <div class="controls">
-                    <input class="xlarge" id="password" name="password" type="password" />
+                    <input class="input-xlarge" id="password" name="password" type="password" />
                     <label class="checkbox">
                         <input type="checkbox" name="rememberme" value="true" /> Remember me
                     </label>
