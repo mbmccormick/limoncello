@@ -6,12 +6,17 @@ body {
     padding-top: 40px;
 }
 
-.container > footer p {
-    text-align: center;
-}
-
 .container {
     max-width: 820px;
+}
+
+.container > footer {
+    margin-top: 20px;
+    color: #999;
+}
+
+.container > footer p {
+    text-align: center;
 }
 
 .container > .content {
@@ -48,11 +53,6 @@ body {
     width: 220px;
 }
 
-.topbar .btn {
-    border: 0;
-}
-
-footer {
-    margin-top: 10px;
-    color: #999;
+.control-label {
+    font-weight: bold;
 }
