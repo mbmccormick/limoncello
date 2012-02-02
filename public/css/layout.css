@@ -51,3 +51,8 @@ body {
 .topbar .btn {
     border: 0;
 }
+
+footer {
+    margin-top: 10px;
+    color: #999;
+}

@@ -2,49 +2,49 @@
     <div class="span8">
         <form action="<?=option('base_uri')?>users/<?=$user['id']?>/edit" method="post" class="form-vertical">
             <fieldset>
-                <div class="clearfix">
-                    <label for="username">Username</label>
-                    <div class="input">
-                        <input class="xlarge" id="username" name="username" size="30" type="text" value="<?=$user['username']?>">
+                <div class="control-group">
+                    <label class="control-label" for="username">Username</label>
+                    <div class="controls">
+                        <input class="input-xlarge" id="username" name="username" type="text" value="<?=$user['username']?>">
                     </div>
                 </div>
                 <br />
-                <div class="clearfix">
-                    <label for="name">Name</label>
-                    <div class="input">
-                        <input class="xlarge" id="name" name="name" size="30" type="text" value="<?=$user['name']?>">
+                <div class="control-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input class="input-xlarge" id="name" name="name" type="text" value="<?=$user['name']?>">
                     </div>
                 </div>
-                <div class="clearfix">
-                    <label for="email">Email Address</label>
-                    <div class="input">
-                        <input class="xlarge email" id="email" name="email" size="30" type="text" value="<?=$user['email']?>">
+                <div class="control-group">
+                    <label class="control-label" for="email">Email Address</label>
+                    <div class="controls">
+                        <input class="input-xlarge email" id="email" name="email" type="text" value="<?=$user['email']?>">
                     </div>
                 </div>
                 <br />
-                <div class="clearfix">
-                    <label for="newpassword">New Password</label>
-                    <div class="input">
-                        <input class="xlarge exclude" id="newpassword" name="newpassword" size="30" type="password">
+                <div class="control-group">
+                    <label class="control-label" for="newpassword">New Password</label>
+                    <div class="controls">
+                        <input class="input-xlarge exclude" id="newpassword" name="newpassword" type="password">
                     </div>
                 </div>
-                <div class="clearfix">
-                    <label for="newpasswordconfirm">Confirm New Password</label>
-                    <div class="input">
-                        <input class="xlarge exclude" id="newpasswordconfirm" name="newpasswordconfirm" size="30" type="password">
+                <div class="control-group">
+                    <label class="control-label" for="newpasswordconfirm">Confirm New Password</label>
+                    <div class="controls">
+                        <input class="input-xlarge exclude" id="newpasswordconfirm" name="newpasswordconfirm" type="password">
                     </div>
                 </div>
                 <br />                
-                <div class="clearfix">
-                    <div class="input">
+                <div class="control-group">
+                    <div class="controls">
                         <input type="checkbox" name="isadministrator" value="1" <?php if ($user['isadministrator'] == 1) { ?>checked="true"<?php } ?> <?php if ($_SESSION["CurrentUser_IsAdministrator"] != "1") { ?>disabled="true"<?php } ?>>
                         <span>This user is an administrator</span>
                     </div>
                 </div>
             </fieldset>
             <br />
-            <div class="actions">
-                <button type="submit" class="btn primary">Save User</button>&nbsp;<a onclick="return confirm('Are you sure you want to delete this user?');" href="<?=option('base_uri')?>users/<?=$user['id']?>/delete" class="btn">Delete</a>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save User</button>&nbsp;<a onclick="return confirm('Are you sure you want to delete this user?');" href="<?=option('base_uri')?>users/<?=$user['id']?>/delete" class="btn">Delete</a>
             </div>
         </form>
     </div>
