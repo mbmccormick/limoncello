@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="span8">
+    <div class="span6">
         <form action="<?=option('base_uri')?>users/<?=$user['id']?>/edit" method="post" class="form-vertical">
             <fieldset>
                 <div class="control-group">
@@ -48,7 +48,7 @@
             </div>
         </form>
     </div>
-    <div class="span4">
+    <div class="span2">
         <h5>Page Description</h5>
         <p>This page allows you to edit a user's information. You also have the ability to delete a user from this page.</p>
         <br />
