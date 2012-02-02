@@ -7,9 +7,9 @@ $(document).ready(function() {
         history.replaceState(null, document.title, getRawUrl());
     }
 
-    $(".alert-message").delay(5000).fadeOut();
+    $(".alert").delay(5000).fadeOut();
 
-    $(".alert-message a.close").click(function() {
+    $(".alert a.close").click(function() {
         $(".alert-message").fadeOut();
     });
 

@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="span8">
+    <div class="span6">
         <form action="<?=option('base_uri')?>users/add" method="post" class="form-vertical">
             <fieldset>
                 <div class="clearfix">
@@ -48,7 +48,7 @@
             </div>
         </form>
     </div>
-    <div class="span4">
+    <div class="span2">
         <h5>Page Description</h5>
         <p>This page allows you to add a new user to the application. Make sure that the email address you provide is valid, as it will be used to reset the user's password.</p>
         <br />

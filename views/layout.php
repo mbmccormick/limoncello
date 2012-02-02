@@ -47,25 +47,25 @@
                 <h1><?=$title?></h1>
             </div>
             <?php if ($_GET['error'] != null) { ?>
-            <div class="alert-message error">
+            <div class="alert alert-error">
                 <a class="close" href="#">&times;</a>
                 <p><strong><?=$_GET['error']?></strong></p>
             </div>
             <?php } ?>
             <?php if ($_GET['warning'] != null) { ?>
-            <div class="alert-message warning">
+            <div class="alert alert-warning">
                 <a class="close" href="#">&times;</a>
                 <p><strong><?=$_GET['warning']?></strong></p>
             </div>
             <?php } ?>
             <?php if ($_GET['success'] != null) { ?>
-            <div class="alert-message success">
+            <div class="alert alert-success">
                 <a class="close" href="#">&times;</a>
                 <p><strong><?=$_GET['success']?></strong></p>
             </div>
             <?php } ?>
             <?php if ($_GET['info'] != null) { ?>
-            <div class="alert-message info">
+            <div class="alert alert-info">
                 <a class="close" href="#">&times;</a>
                 <p><strong><?=$_GET['info']?></strong></p>
             </div>
