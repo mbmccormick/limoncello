@@ -48,26 +48,26 @@
             </div>
             <?php if ($_GET['error'] != null) { ?>
             <div class="alert alert-error">
-                <a class="close" href="#">&times;</a>
-                <p><strong><?=$_GET['error']?></strong></p>
+                <a class="close">&times;</a>
+                <strong>Error:</strong> <?=$_GET['error']?>
             </div>
             <?php } ?>
             <?php if ($_GET['warning'] != null) { ?>
             <div class="alert alert-warning">
-                <a class="close" href="#">&times;</a>
-                <p><strong><?=$_GET['warning']?></strong></p>
+                <a class="close">&times;</a>
+                <strong>Warning:</strong> <?=$_GET['warning']?>
             </div>
             <?php } ?>
             <?php if ($_GET['success'] != null) { ?>
             <div class="alert alert-success">
-                <a class="close" href="#">&times;</a>
-                <p><strong><?=$_GET['success']?></strong></p>
+                <a class="close">&times;</a>
+                <strong>Success:</strong> <?=$_GET['success']?>
             </div>
             <?php } ?>
             <?php if ($_GET['info'] != null) { ?>
             <div class="alert alert-info">
-                <a class="close" href="#">&times;</a>
-                <p><strong><?=$_GET['info']?></strong></p>
+                <a class="close">&times;</a>
+                <strong>Information:</strong> <?=$_GET['info']?>
             </div>
             <?php } ?>
             <?=$content?>
