@@ -56,3 +56,8 @@ body {
 .control-label {
     font-weight: bold;
 }
+
+a.btn {
+    position: relative;
+    bottom: -2px;
+}
