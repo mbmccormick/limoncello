@@ -10,12 +10,12 @@ $(document).ready(function() {
     $(".alert").delay(5000).fadeOut();
 
     $(".alert a.close").click(function() {
-        $(".alert-message").fadeOut();
+        $(".alert").fadeOut();
     });
 
-    $("form.form-stacked").submit(function() {
+    $("form.form-vertical").submit(function() {
         var formData = [];
-        $("form.form-stacked input").each(function() { formData.push(this); });
+        $("form.form-vertical input").each(function() { formData.push(this); });
 
         for (var i=0; i < formData.length; i++) { 
             if (hasClass(formData[i], "exclude")) { 
