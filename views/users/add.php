@@ -44,7 +44,7 @@
                 </div>
             </fieldset>
             <br />
-            <div class="actions">
+            <div class="form-actions">
                 <button type="submit" class="btn btn-primary">Add User</button>&nbsp;<button type="reset" class="btn">Cancel</button>
             </div>
         </form>
