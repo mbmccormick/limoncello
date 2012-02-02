@@ -26,13 +26,13 @@ $(document).ready(function() {
 
             if (!formData[i].value) { 
                 hasError = true;
-                $(formData[i].parent.parent).addClass("error");
+                $(formData[i]).parent().parent().addClass("error");
             }
 
             if (hasClass(formData[i], "email")) { 
                 if (!validateEmail(formData[i].value)) {
                     hasEmailError = true;
-                    $(formData[i].parent.parent).addClass("error");
+                    $(formData[i]).parent().parent().addClass("error");
                 }
             }
         }
