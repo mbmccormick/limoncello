@@ -36,3 +36,7 @@ h1 {
     -moz-border-radius: 0px 0px 3px 3px;
     border-radius: 0px 0px 3px 3px;
 }
+
+.control-label {
+    font-weight: bold;
+}

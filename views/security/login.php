@@ -11,18 +11,15 @@
                 <label class="control-label" for="password">Password</label>
                 <div class="controls">
                     <input class="xlarge" id="password" name="password" type="password" />
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
                     <label class="checkbox">
                         <input type="checkbox" name="rememberme" value="true" /> Remember me
                     </label>
                 </div>
             </div>
         </fieldset>
+        <br />
         <div class="actions">
-            <button type="submit" class="btn btn-primary">Login</button><a class="pull-right" href="<?=option('base_uri')?>login/reset">Forgot your password?</a>
+            <button type="submit" class="btn btn-primary">Login</button><a class="pull-right" style="padding-top: 5px;" href="<?=option('base_uri')?>login/reset">Forgot your password?</a>
         </div>
     </form>
 </div>
