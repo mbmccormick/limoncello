@@ -5,40 +5,41 @@
                 <div class="control-group">
                     <label class="control-label" for="username">Username</label>
                     <div class="controls">
-                        <input class="input-xlarge" id="username" name="username" type="text" value="<?=$user['username']?>">
+                        <input class="input-xlarge" id="username" name="username" type="text" value="<?=$user['username']?>" />
                     </div>
                 </div>
                 <br />
                 <div class="control-group">
                     <label class="control-label" for="name">Name</label>
                     <div class="controls">
-                        <input class="input-xlarge" id="name" name="name" type="text" value="<?=$user['name']?>">
+                        <input class="input-xlarge" id="name" name="name" type="text" value="<?=$user['name']?>" />
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="email">Email Address</label>
                     <div class="controls">
-                        <input class="input-xlarge email" id="email" name="email" type="text" value="<?=$user['email']?>">
+                        <input class="input-xlarge email" id="email" name="email" type="text" value="<?=$user['email']?>" />
                     </div>
                 </div>
                 <br />
                 <div class="control-group">
                     <label class="control-label" for="newpassword">New Password</label>
                     <div class="controls">
-                        <input class="input-xlarge exclude" id="newpassword" name="newpassword" type="password">
+                        <input class="input-xlarge exclude" id="newpassword" name="newpassword" type="password" />
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="newpasswordconfirm">Confirm New Password</label>
                     <div class="controls">
-                        <input class="input-xlarge exclude" id="newpasswordconfirm" name="newpasswordconfirm" type="password">
+                        <input class="input-xlarge exclude" id="newpasswordconfirm" name="newpasswordconfirm" type="password" />
                     </div>
                 </div>
                 <br />                
                 <div class="control-group">
                     <div class="controls">
-                        <input type="checkbox" name="isadministrator" value="1" <?php if ($user['isadministrator'] == 1) { ?>checked="true"<?php } ?> <?php if ($_SESSION["CurrentUser_IsAdministrator"] != "1") { ?>disabled="true"<?php } ?>>
-                        <span>This user is an administrator</span>
+                        <label class="checkbox">
+                            <input type="checkbox" name="isadministrator" value="1" <?php if ($user['isadministrator'] == 1) { ?>checked="true"<?php } ?> <?php if ($_SESSION["CurrentUser_IsAdministrator"] != "1") { ?>disabled="true"<?php } ?> /> This user is an administrator
+                        </label>
                     </div>
                 </div>
             </fieldset>
