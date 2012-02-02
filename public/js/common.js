@@ -24,6 +24,8 @@ $(document).ready(function() {
                 continue;
             }
 
+            $(formData[i]).parent().parent().removeClass("error");
+
             if (!formData[i].value) { 
                 hasError = true;
                 $(formData[i]).parent().parent().addClass("error");
