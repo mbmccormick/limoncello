@@ -41,8 +41,8 @@ body {
     margin: -20px -20px 20px;
 }
 
-.content .span6, .content .span2 {
-    min-height: 500px;
+.content .span8 {
+    width: 820px;
 }
 
 .content .span6 {
