@@ -25,19 +25,19 @@ $(document).ready(function() {
             }
 
             $(formData[i]).parent().parent().removeClass("error");
-            $(formData[i]).parent().remove(".help-inline");
+            $("form.form-vertical .help-inline-error").remove();
 
             if (!formData[i].value) { 
                 hasError = true;
                 $(formData[i]).parent().parent().addClass("error");
-                $(formData[i]).parent().append("<span class='help-inline'>This is a required field.</span>");
+                $(formData[i]).parent().append("<span class='help-inline help-inline-error'>This is a required field.</span>");
             }
 
             if (hasClass(formData[i], "email")) { 
                 if (!validateEmail(formData[i].value)) {
                     hasEmailError = true;
                     $(formData[i]).parent().parent().addClass("error");
-                    $(formData[i]).parent().append("<span class='help-inline'>This is not a valid email address.</span>");
+                    $(formData[i]).parent().append("<span class='help-inline help-inline-error'>This is not a valid email address.</span>");
                 }
             }
         }
