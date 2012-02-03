@@ -13,7 +13,7 @@ h1 {
     max-width: 400px;
 }
 
-.container > row {
+.container > .row {
     margin-left: 0px;   
 }
 
