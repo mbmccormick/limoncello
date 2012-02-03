@@ -10,7 +10,11 @@ h1 {
 }
 
 .container {
-    width: 480px;
+    max-width: 400px;
+}
+
+.container > row {
+    margin-left: 0px;   
 }
 
 .container > footer {
@@ -21,6 +25,10 @@ h1 {
 }
 
 .container > footer p {
+    text-align: center;
+}
+
+.alert {
     text-align: center;
 }
 
