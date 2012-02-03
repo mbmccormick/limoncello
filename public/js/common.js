@@ -17,6 +17,8 @@ $(document).ready(function() {
         var formData = [];
         $("form.form-vertical input").each(function() { formData.push(this); });
 
+        $("form.form-vertical .help-inline-error").remove();
+
         var hasError = false;
         var hasEmailError = false;
         for (var i=0; i < formData.length; i++) { 
@@ -25,8 +27,7 @@ $(document).ready(function() {
             }
 
             $(formData[i]).parent().parent().removeClass("error");
-            $("form.form-vertical .help-inline-error").remove();
-
+            
             if (!formData[i].value) { 
                 hasError = true;
                 $(formData[i]).parent().parent().addClass("error");
