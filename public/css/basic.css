@@ -56,9 +56,3 @@ a.btn {
     position: relative;
     bottom: -2px;
 }
-
-@media (max-width: 720px) {
-  .span2 {
-    display: none;
-  }
-}
