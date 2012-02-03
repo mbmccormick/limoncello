@@ -67,7 +67,11 @@ a.btn {
 }
 
 @media screen and (max-width: 720px) {
-  .span2 {
-    display: none;
+  .content .span6 {
+    padding-right: 0px;
+  }
+  
+  .content .span2 {
+    display: none !important;
   }
 }
