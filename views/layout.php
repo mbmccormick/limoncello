@@ -44,7 +44,6 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"></a>
                 </div>
             </div>
         </div>
