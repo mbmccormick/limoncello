@@ -65,3 +65,9 @@ a.btn {
     position: relative;
     bottom: -2px;
 }
+
+@media screen and (max-width: 720px) {
+  .span2 {
+    display: none;
+  }
+}
