@@ -16,29 +16,36 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
                 <a class="brand" href="<?=option('base_uri')?>"><?=ApplicationName?></a>
-                <ul class="nav">
-                    <?php if ($_SERVER['REQUEST_URI'] == option('base_uri')) { ?>
-                    <li class="active"><a href="<?=option('base_uri')?>">Dashboard</a></li>
-                    <?php } else { ?>
-                    <li><a href="<?=option('base_uri')?>">Dashboard</a></li>
-                    <?php } ?>
-                    <?php if (strpos($_SERVER['REQUEST_URI'], option('base_uri') . "users") === 0) { ?>
-                    <li class="active"><a href="<?=option('base_uri')?>users">Users</a></li>
-                    <?php } else { ?>
-                    <li><a href="<?=option('base_uri')?>users">Users</a></li>
-                    <?php } ?>
-                </ul>
-                <ul class="nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$_SESSION['CurrentUser_Name']?> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Profile</a></li>
-                            <li><a href="<?=option('base_uri')?>logout">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"></a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <?php if ($_SERVER['REQUEST_URI'] == option('base_uri')) { ?>
+                        <li class="active"><a href="<?=option('base_uri')?>">Dashboard</a></li>
+                        <?php } else { ?>
+                        <li><a href="<?=option('base_uri')?>">Dashboard</a></li>
+                        <?php } ?>
+                        <?php if (strpos($_SERVER['REQUEST_URI'], option('base_uri') . "users") === 0) { ?>
+                        <li class="active"><a href="<?=option('base_uri')?>users">Users</a></li>
+                        <?php } else { ?>
+                        <li><a href="<?=option('base_uri')?>users">Users</a></li>
+                        <?php } ?>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$_SESSION['CurrentUser_Name']?> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>">Edit Profile</a></li>
+                                <li><a href="<?=option('base_uri')?>logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="<?=option('base_uri')?>users/<?=$_SESSION['CurrentUser_ID']?>"></a>
+                </div>
             </div>
         </div>
     </div>
