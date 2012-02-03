@@ -25,27 +25,30 @@ $(document).ready(function() {
             }
 
             $(formData[i]).parent().parent().removeClass("error");
+            $(formData[i]).parent().remove(".help-inline");
 
             if (!formData[i].value) { 
                 hasError = true;
                 $(formData[i]).parent().parent().addClass("error");
+                $(formData[i]).parent().append("<span class='help-inline'>This is a required field.</span>");
             }
 
             if (hasClass(formData[i], "email")) { 
                 if (!validateEmail(formData[i].value)) {
                     hasEmailError = true;
                     $(formData[i]).parent().parent().addClass("error");
+                    $(formData[i]).parent().append("<span class='help-inline'>This is not a valid email address.</span>");
                 }
             }
         }
 
         if (hasError == true) {
-            alert("Please complete all fields, check your input, and try again.")                
+            // alert("Please complete all fields, check your input, and try again.")                
             return false;
         }
 
         if (hasEmailError == true) {
-            alert("Please enter a valid email address and try again.")                
+            // alert("Please enter a valid email address and try again.")                
             return false;
         }
     });
