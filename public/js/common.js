@@ -9,10 +9,6 @@ $(document).ready(function() {
 
     $(".alert").delay(5000).fadeOut();
 
-    $(".alert a.close").click(function() {
-        $(".alert").fadeOut();
-    });
-
     $("form.form-vertical").submit(function() {
         var formData = [];
         $("form.form-vertical input").each(function() { formData.push(this); });
